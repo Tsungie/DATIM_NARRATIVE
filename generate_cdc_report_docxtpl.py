@@ -247,11 +247,15 @@ def build_table2_subdoc(tpl, optimized_df):
 # Main
 # -----------------------------
 
+
 def main():
+    import argparse, os, sys
+    import pandas as pd
+
     parser = argparse.ArgumentParser(description='Generate CDC quarterly narrative report (docxtpl).')
     parser.add_argument('--template', default='cdc_template.docx', help='Word template with placeholders')
-    parser.add_argument('--ehr', required=True, help='Path to EHR Excel (IMPILO extract)')
-    parser.add_argument('--dhis2', required=True, help='Path to DHIS2/MRF Excel')
+    parser.add_argument('--ehr', help='Path to EHR Excel (IMPILO extract)')
+    parser.add_argument('--dhis2', help='Path to DHIS2/MRF Excel')
     parser.add_argument('--optimized', default=None, help='Path to optimized sites concordance Excel (optional)')
     parser.add_argument('--out', default='CDC_Report_Q4_rendered.docx', help='Output DOCX path')
     parser.add_argument('--figdir', default='figures', help='Directory to save generated figures')
@@ -264,25 +268,74 @@ def main():
     parser.add_argument('--pushed-via-pipeline', type=int, default=81)
     parser.add_argument('--mobile-backups', type=int, default=170)
 
+    # NEW: demo mode
+    parser.add_argument('--demo', '--use-sample', action='store_true',
+                        help='Run with built-in sample data (no EHR/DHIS2 files required)')
+
     args = parser.parse_args()
 
-    # Load data
-    ehr = pd.read_excel(args.ehr, engine='openpyxl')
-    dhis2 = pd.read_excel(args.dhis2, engine='openpyxl')
-    optimized = None
-    if args.optimized and os.path.exists(args.optimized):
-        optimized = pd.read_excel(args.optimized, engine='openpyxl')
+    # -----------------------------
+    # Load data or build demo data
+    # -----------------------------
+    if args.demo:
+        # Build small, realistic sample data in-memory
+        districts = ['Harare','Bulawayo','Marondera','Mutare','Kwekwe','Gweru']
+        facilities = [f'{d} Facility {i}' for d in districts for i in range(1, 6)]
+        rng = pd.Series(range(len(facilities)))
+        ehr = pd.DataFrame({
+            'district': [f.split()[0] for f in facilities],
+            'facility': facilities,
+            'HTS_TST': (rng*13 % 120 + 50),
+            'HTS_POS': (rng*3  % 15  + 2),
+            'TX_NEW' : (rng*4  % 20  + 1),
+            'TX_CURR': (rng*17 % 300 + 120),
+            # optional for Figure 2
+            'TX_ML'  : (rng*7  % 40  + 5),
+            'TX_TB'  : (rng*5  % 25  + 3),
+            'PMTCT_STAT': (rng*11 % 80 + 10),
+        })
+        # Create DHIS2/MRF as slightly larger numbers to get varied concordance
+        dhis2 = ehr.copy()
+        for col in ['HTS_TST','HTS_POS','TX_NEW','TX_CURR']:
+            dhis2[col] = (ehr[col] * 1.8).round()
 
+        # Optional optimized sites sample
+        optimized = pd.DataFrame({
+            'district': ['Harare','Bulawayo','Marondera','Mutare'],
+            'facility': ['Avondale','Nketa','Kushinga Phikelela','Zimunya'],
+            'HTS_TST_MRF': [976, 627, 319, 439],
+            'HTS_TST_EHR': [825, 675, 318, 408],
+            'HTS_POS_MRF': [30, 21, 15, 14],
+            'HTS_POS_EHR': [31, 25, 15, 16],
+            'TX_NEW_MRF' : [36, 24, 15, 14],
+            'TX_NEW_EHR' : [34, 25, 15, 16],
+            'TX_CURR_MRF': [2582, 4001, 971, 999],
+            'TX_CURR_EHR': [2657, 4049, 801, 969],
+        })
+    else:
+        # Validate required arguments in normal mode
+        if not args.ehr or not args.dhis2:
+            parser.error('the following arguments are required: --ehr, --dhis2 (or use --demo)')
+        ehr = pd.read_excel(args.ehr, engine='openpyxl')
+        dhis2 = pd.read_excel(args.dhis2, engine='openpyxl')
+        optimized = None
+        if args.optimized and os.path.exists(args.optimized):
+            optimized = pd.read_excel(args.optimized, engine='openpyxl')
+
+    # -----------------------------
     # Sanity columns
+    # -----------------------------
     required_cols = {'facility','district','HTS_TST','HTS_POS','TX_NEW','TX_CURR'}
-    if not required_cols.issubset(ehr.columns):
-        missing = ', '.join(sorted(required_cols - set(ehr.columns)))
-        sys.exit(f"EHR file missing required columns: {missing}")
-    if not required_cols.issubset(dhis2.columns):
-        missing = ', '.join(sorted(required_cols - set(dhis2.columns)))
-        sys.exit(f"DHIS2 file missing required columns: {missing}")
+    def ensure_cols(df, name):
+        missing = required_cols - set(df.columns)
+        if missing:
+            sys.exit(f'{name} file missing required columns: {", ".join(sorted(missing))}')
+    ensure_cols(ehr, 'EHR')
+    ensure_cols(dhis2, 'DHIS2')
 
+    # -----------------------------
     # Headline numbers
+    # -----------------------------
     total_active_facilities = args.total_active_facilities or ehr['facility'].nunique()
     raw_data_sites = args.raw_data_sites
     collected_manually = args.collected_manually
@@ -298,21 +351,25 @@ def main():
     prop_tx_curr = prop_reporting(ehr, 'TX_CURR')
     prop_tx_ml   = prop_reporting(ehr, 'TX_ML') if 'TX_ML' in ehr.columns else 0.0
     prop_tx_tb   = prop_reporting(ehr, 'TX_TB') if 'TX_TB' in ehr.columns else 0.0
-    prop_hts_tst = prop_reporting(ehr, 'HTS_TST')  # HTS_TST/POS combined label uses HTS_TST base here
+    prop_hts_tst = prop_reporting(ehr, 'HTS_TST')
     prop_pmtct_stat = prop_reporting(ehr, 'PMTCT_STAT') if 'PMTCT_STAT' in ehr.columns else 0.0
 
+    # -----------------------------
     # Overall concordance (Table 3)
+    # -----------------------------
     def sums(df, cols):
         return {c: int(df[c].sum()) for c in cols}
-
     cols = ['HTS_TST','HTS_POS','TX_NEW','TX_CURR']
     mrf_sums = sums(dhis2, cols)
     ehr_sums = sums(ehr, cols)
 
-    overall_hts_tst_conc = concordance_pct(mrf_sums['HTS_TST'], ehr_sums['HTS_TST'])
-    overall_hts_pos_conc = concordance_pct(mrf_sums['HTS_POS'], ehr_sums['HTS_POS'])
-    overall_tx_new_conc  = concordance_pct(mrf_sums['TX_NEW'],  ehr_sums['TX_NEW'])
-    overall_tx_curr_conc = concordance_pct(mrf_sums['TX_CURR'], ehr_sums['TX_CURR'])
+    def conc(mrf_val, ehr_val):
+        return round(100 * ehr_val / mrf_val, 1) if mrf_val else 0.0
+
+    overall_hts_tst_conc = conc(mrf_sums['HTS_TST'], ehr_sums['HTS_TST'])
+    overall_hts_pos_conc = conc(mrf_sums['HTS_POS'], ehr_sums['HTS_POS'])
+    overall_tx_new_conc  = conc(mrf_sums['TX_NEW'],  ehr_sums['TX_NEW'])
+    overall_tx_curr_conc = conc(mrf_sums['TX_CURR'], ehr_sums['TX_CURR'])
 
     stats = {
         'total_active_facilities': total_active_facilities,
@@ -329,17 +386,21 @@ def main():
         'prop_pmtct_stat': prop_pmtct_stat,
     }
 
+    # -----------------------------
     # Build figures
+    # -----------------------------
     figs = build_figures(ehr, args.figdir, stats)
 
-    # Load template
+    # -----------------------------
+    # Load template & build tables
+    # -----------------------------
     tpl = DocxTemplate(args.template)
-
-    # Build subdocs (tables)
     sub1 = build_table1_subdoc(tpl, ehr)
     sub2 = build_table2_subdoc(tpl, optimized)
 
-    # Context for template rendering
+    # -----------------------------
+    # Render context
+    # -----------------------------
     context = {
         # Header counts
         'total_active_facilities': total_active_facilities,
@@ -355,7 +416,7 @@ def main():
         'prop_tx_tb': prop_tx_tb,
         'prop_hts_tst': prop_hts_tst,
         'prop_pmtct_stat': prop_pmtct_stat,
-        # Narrative text placeholders (adjust as needed)
+        # Narrative text placeholders (adjust if you have specific text)
         'challenge_database_collection': (
             'Onboarding more facilities to the automated data pipeline and improving the mobile application '
             'to reduce manual intervention; addressing network selection issues and ensuring complete uploads.'
@@ -383,7 +444,7 @@ def main():
         # Subdocs for tables
         'table1_indicators': sub1,
         'table2_concordance_facility': sub2,
-        # Figures (InlineImage)
+        # Figures
         'figure1': InlineImage(tpl, figs['figure1'], width=Mm(140)),
         'figure2': InlineImage(tpl, figs['figure2'], width=Mm(140)),
         'figure3': InlineImage(tpl, figs['figure3'], width=Mm(140)),
