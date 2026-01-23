@@ -1,399 +1,605 @@
 #!/usr/bin/env python3
 """
-CDC Quarterly Narrative Report Generator (Full data-to-charts pipeline)
+Generate CDC Figure 2 and Table 1 from Consistency Report (COP24 Q4)
 
-This script renders a CDC-styled Word report from a template (cdc_template.docx)
-using docxtpl, generating figures and color-coded concordance tables.
+This script:
+  - Loads a Consistency_Report Excel (Indicator, Number of Reporting Units)
+  - Computes reporting completeness for a fixed set of 21 indicators vs targets
+  - Produces Figure 2 (PNG) and a Table 1 subdocument
+  - Renders into a Word template (default: cdc_template.docx)
 
-Usage (example):
+Usage:
+  python generate_cdc_report_consistency.py \
+    --consistency Consistency_Report_COP2024_Q4.xlsx \
+    --template "cdc_template.docx" \
+    --out output/CDC_Report_COP24_Q4_rendered.docx \
+    --period COP24 Q4
 
-  python generate_cdc_report_docxtpl.py \
-      --template cdc_template.docx \
-      --ehr data/ehr_data.xlsx \
-      --dhis2 data/dhis2_data.xlsx \
-      --optimized data/optimized_sites_concordance.xlsx \
-      --out CDC_Report_Q4_rendered.docx \
-      --quarter COP24 Q4 \
-      --raw-data-sites 573 \
-      --collected-manually 322 \
-      --pushed-via-pipeline 81 \
-      --mobile-backups 170
-
-Requirements:
-  pip install pandas matplotlib seaborn python-docx docxtpl reportlab openpyxl
+Dependencies (install in your venv):
+  pip install pandas matplotlib seaborn docxtpl python-docx openpyxl docxcompose
 """
 
 import argparse
 import os
-import sys
+from datetime import datetime
 import pandas as pd
-import numpy as np
+import matplotlib
+matplotlib.use('Agg')  
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-# Lazy imports for docxtpl/python-docx only when rendering
 from docxtpl import DocxTemplate, InlineImage
 from docx.shared import Mm
 from docx.oxml import OxmlElement
 from docx.oxml.ns import qn
 
-pd.options.display.float_format = '{:,.1f}'.format
+# ---------------
+# Targets (fixed 21 indicators)
+# ---------------
+TARGETS = {
+    'TX_CURR': 823,
+    'TX_TB': 823,
+    'TX_ML': 823,
+    'HTS_TST and HTS_POS': 823,
+    'PMTCT_STAT': 761,
+    'PMTCT_ART': 659,
+    'TB_PREV': 657,
+    'TX_PVLS': 823,
+    'HTS_INDEX': 823,
+    'TX_NEW': 823,
+    'TB_ART': 657,
+    'PREP_NEW': 628,
+    'PMTCT_FO': 661,
+    'HTS_SELF': 823,
+    'TB_STAT': 657,
+    'PMTCT_EID': 655,
+    'CXCA_SCRN': 628,
+    'CXCA_TX': 473,
+    'PREP_CT': 628,
+    'TX_RTT': 823,
+    'PMTCT_HEI': 661,
+}
 
-# -----------------------------
-# Helpers
-# -----------------------------
+# ---------------
+# Mapping rules: Consistency Report indicator names -> canonical
+# Prefer denominators when available
+# ---------------
+MAP_RULES = {
+    'TX_CURR': ['TX_CURR TA'],
+    'TX_TB': ['TX_TB(DENOM) TA', 'TX_TB TA'],
+    'TX_ML': ['TX_ML TA'],
+    'HTS_TST': ['HTS_TST TA'],
+    'HTS_POS': ['HTS_POS TA'],  # may be absent
+    'PMTCT_STAT': ['PMTCT_STAT(DENOM) TA', 'PMTCT_STAT TA'],
+    'PMTCT_ART': ['PMTCT_ART TA'],
+    'TB_PREV': ['TB_PREV(DENOM) TA', 'TB_PREV TA'],
+    'TX_PVLS': ['TX_PVLS(DENOM) TA', 'TX_PVLS TA'],
+    'HTS_INDEX': ['HTS_INDEX TA'],
+    'TX_NEW': ['TX_NEW TA'],
+    'TB_ART': ['TB_ART TA'],
+    'PREP_NEW': ['PrEP_NEW TA', 'PREP_NEW TA'],
+    'PMTCT_FO': ['PMTCT_FO TA'],
+    'HTS_SELF': ['HTS_SELF TA'],
+    'TB_STAT': ['TB_STAT(DENOM) TA', 'TB_STAT TA'],
+    'PMTCT_EID': ['PMTCT_EID TA'],
+    'CXCA_SCRN': ['CXCA_SCRN TA'],
+    'CXCA_TX': ['CXCA_TX TA'],
+    'PREP_CT': ['PrEP_CT TA', 'PREP_CT TA'],
+    'TX_RTT': ['TX_RTT TA'],
+    'PMTCT_HEI': ['PMTCT_HEI TA'],
+}
 
-def thousands(x):
-    try:
-        return f"{int(x):,}"
-    except Exception:
-        return str(x)
+INDICATOR_ORDER = [
+    'TX_CURR', 'TX_TB', 'TX_ML', 'HTS_TST and HTS_POS', 'PMTCT_STAT', 'PMTCT_ART',
+    'TB_PREV', 'TX_PVLS', 'HTS_INDEX', 'TX_NEW', 'TB_ART', 'PREP_NEW', 'PMTCT_FO',
+    'HTS_SELF', 'TB_STAT', 'PMTCT_EID', 'CXCA_SCRN', 'CXCA_TX', 'PREP_CT', 'TX_RTT', 'PMTCT_HEI'
+]
+
+# Mapping for Concordance Analysis (Wide to Long)
+CONCORDANCE_MAP = {
+    "HTS_TST":  ("MRF HTS_TX_NEW (Total Tests)",        "DATIM HTS_TX_NEW (Total Tests)"),
+    "HTS_POS":  ("MRF HTS_TX_NEW (Total Positives)",    "DATIM HTS_TX_NEW (Total Positives)"),
+    "TX_NEW":   ("MRF HTS_TX_NEW (Total Initiations)",  "DATIM HTS_TX_NEW (Total Initiations)"),
+    "TX_CURR":  ("MRF TX_CURR",                         "DATIM TX_CURR"),
+}
 
 
-def concordance_pct(mrf_val, ehr_val):
-    try:
-        mrf = float(mrf_val)
-        ehr = float(ehr_val)
-        if mrf == 0:
-            return 0.0
-        return round(100.0 * ehr / mrf, 1)
-    except Exception:
-        return 0.0
+def load_consistency(path: str) -> pd.DataFrame:
+    """Load Consistency Report and return DataFrame with columns ['Indicator','ReportingUnits']."""
+    df = pd.read_excel(path, engine='openpyxl', sheet_name=0)
+    
+    # Ensure unique columns to prevent DataFrame selection errors
+    df.columns = [str(c).strip() for c in df.columns]
+    df = df.loc[:, ~df.columns.duplicated()]
+
+    # Heuristic: find the two required columns
+    ind_col = None
+    num_col = None
+    for c in df.columns:
+        cname = str(c).strip().lower()
+        if 'indicator' in cname:
+            ind_col = c
+        if ('number' in cname or 'no.' in cname) and 'report' in cname:
+            num_col = c
+    if ind_col is None or num_col is None:
+        # Fallback to first two columns
+        ind_col = df.columns[0]
+        num_col = df.columns[1]
+    out = pd.DataFrame({
+        'Indicator': df[ind_col].astype(str).str.strip(),
+        'ReportingUnits': pd.to_numeric(df[num_col], errors='coerce').fillna(0).astype(int)
+    })
+    return out
+
+
+def pick_reporting(cons_df: pd.DataFrame, patterns: list[str]) -> int:
+    """Pick reporting units by trying patterns in order (first hit wins) and returning the value."""
+    for pat in patterns:
+        row = cons_df[cons_df['Indicator'] == pat]
+        if not row.empty:
+            return int(row.iloc[0]['ReportingUnits'])
+    return 0
+
+
+def build_21_indicator_table(cons_df: pd.DataFrame) -> pd.DataFrame:
+    rows = []
+    # First compute individual pieces (including HTS_TST & HTS_POS)
+    values = {}
+    for key, pats in MAP_RULES.items():
+        values[key] = pick_reporting(cons_df, pats)
+    # Combined HTS_TST and HTS_POS: choose max if both present, else whichever is present
+    hts_combined = max(values.get('HTS_TST', 0), values.get('HTS_POS', 0))
+
+    # Compose the 21-indicator table
+    for ind in INDICATOR_ORDER:
+        if ind == 'HTS_TST and HTS_POS':
+            reporting = hts_combined
+        else:
+            reporting = values.get(ind, 0)
+        tgt = TARGETS[ind]
+        comp = round(100 * reporting / tgt, 1) if tgt else 0.0
+        rows.append({
+            'Indicator': ind,
+            'Number_of_facilities_reporting': reporting,
+            'Target': tgt,
+            'Reporting_Completeness_%': comp,
+        })
+    return pd.DataFrame(rows)
+
+
+def build_figure2(table_df: pd.DataFrame, out_png: str, period_label: str):
+    sns.set(style='whitegrid')
+    plt.figure(figsize=(12,8))
+    plot_df = table_df.sort_values('Reporting_Completeness_%', ascending=False)
+    ax = sns.barplot(x='Indicator', y='Reporting_Completeness_%', data=plot_df, color='#4C78A8')
+    plt.ylabel('Reporting Completeness (%)')
+    plt.xlabel('Indicator')
+    plt.ylim(0,100)
+    plt.title(f'Figure 2: Proportion of sites reporting individual indicators in IMPILO E-HR {period_label}')
+    plt.xticks(rotation=45, ha='right')
+    # annotate bars with % only
+    for i, p in enumerate(ax.patches):
+        pct = plot_df.iloc[i]['Reporting_Completeness_%']
+        ax.annotate(f"{pct}%", (p.get_x()+p.get_width()/2, p.get_height()),
+                    ha='center', va='bottom', fontsize=9)
+    plt.tight_layout(); plt.savefig(out_png, dpi=200); plt.close()
+
+
+def concordance_value(mrf, ehr):
+    """Calculate concordance percentage."""
+    if mrf == 0 and ehr == 0: return 100.0
+    if mrf == 0 and ehr > 0: return 0.0
+    return max(0.0, min(100.0, (1 - abs(ehr - mrf) / mrf) * 100))
+
+
+def load_concordance(path: str) -> pd.DataFrame:
+    """Load Concordance Analysis Excel and reshape from Wide to Long format."""
+    raw = pd.read_excel(path, engine='openpyxl')
+    raw.columns = [str(c).strip() for c in raw.columns]
+    
+    rows = []
+    for ind, (mrf_col, ehr_col) in CONCORDANCE_MAP.items():
+        # Skip if columns missing
+        if mrf_col not in raw.columns or ehr_col not in raw.columns:
+            continue
+            
+        tmp = raw[["Facility", "Province", "District", mrf_col, ehr_col]].copy()
+        tmp["Indicator"] = ind
+        tmp["MRF"] = pd.to_numeric(tmp[mrf_col], errors="coerce").fillna(0)
+        tmp["EHR"] = pd.to_numeric(tmp[ehr_col], errors="coerce").fillna(0)
+        tmp["Concordance_%"] = tmp.apply(lambda r: concordance_value(r["MRF"], r["EHR"]), axis=1)
+        
+        rows.append(tmp[["Facility", "Province", "District", "Indicator", "MRF", "EHR", "Concordance_%"]])
+    
+    return pd.concat(rows, ignore_index=True) if rows else pd.DataFrame()
 
 
 def shade_cell(cell, color_hex):
-    """Apply background shading to a python-docx cell.
-    color_hex: e.g. 'C6EFCE' (green), 'FFEB9C' (amber), 'F8CBAD' (red)
-    """
     tcPr = cell._tc.get_or_add_tcPr()
     shd = OxmlElement('w:shd')
-    shd.set(qn('w:fill'), color_hex)
-    # Optional clear others
     shd.set(qn('w:val'), 'clear')
+    shd.set(qn('w:fill'), color_hex)
     tcPr.append(shd)
 
+def get_concordance_color(val):
+    if val >= 95: return 'C6EFCE' # Green
+    if val >= 90: return 'FFEB9C' # Amber
+    return 'F8CBAD' # Red
 
-def color_for_conc(pct):
-    """Return hex fill color for given concordance percent.
-    Green  : 90–120
-    Amber  : 75–89.9
-    Red    : <75 or >120
+
+def compute_table3_context(df: pd.DataFrame) -> dict:
+    """Compute Overall Data Concordance for Table 3."""
+    context = {}
+    required_cols = {'Indicator', 'MRF', 'EHR'}
+    if not required_cols.issubset(df.columns):
+        print(f"Warning: Concordance file missing columns for Table 3. Found: {df.columns}")
+        return context
+
+    # Indicators for Table 3
+    indicators = ['HTS_TST', 'HTS_POS', 'TX_NEW', 'TX_CURR']
+    
+    for ind in indicators:
+        # Filter by indicator (case insensitive)
+        sub = df[df['Indicator'].astype(str).str.upper() == ind]
+        
+        mrf_sum = sub['MRF'].sum() if not sub.empty else 0
+        ehr_sum = sub['EHR'].sum() if not sub.empty else 0
+        
+        # Calculate concordance
+        conc = round((ehr_sum / mrf_sum * 100), 1) if mrf_sum > 0 else 0.0
+        
+        # Populate context keys (lowercase keys as per template)
+        key_base = f"overall_{ind.lower()}"
+        context[f"{key_base}_mrf"] = f"{int(mrf_sum):,}"
+        context[f"{key_base}_ehr"] = f"{int(ehr_sum):,}"
+        context[f"{key_base}_conc"] = str(conc)
+
+    return context
+
+
+def build_figure4(df: pd.DataFrame, out_png: str):
     """
-    if pct is None:
-        return None
-    try:
-        p = float(pct)
-    except Exception:
-        return None
-    if 90.0 <= p <= 120.0:
-        return 'C6EFCE'  # green
-    if 75.0 <= p < 90.0:
-        return 'FFEB9C'  # amber
-    return 'F8CBAD'      # red
+    Generate TX_CURR Concordance Combo Chart.
+    - Left Axis: Grouped Bars (Volume)
+    - Right Axis: Hidden (Red Diamonds float at correct height)
+    - Legend: Outside on the right, includes Concordance.
+    """
+    import matplotlib.patches as mpatches
+    from matplotlib.lines import Line2D
 
+    required_cols = {'Indicator', 'Province', 'MRF', 'EHR'}
+    if not required_cols.issubset(df.columns):
+        print(f"Warning: Concordance file missing columns for Figure 4. Found: {df.columns}")
+        return
 
-# -----------------------------
-# Figure builders
-# -----------------------------
+    # 1. Filter and Normalize
+    target_provinces = ['Harare', 'Bulawayo']
+    
+    mask_prov = df['Province'].astype(str).str.strip().apply(
+        lambda x: any(p.lower() in x.lower() for p in target_provinces)
+    )
+    mask_ind = df['Indicator'].astype(str).str.upper() == 'TX_CURR'
+    subset = df[mask_prov & mask_ind].copy()
+    
+    if subset.empty:
+        print("Warning: No data found for Figure 4.")
+        return
 
-def build_figures(ehr_df, outdir, stats):
-    os.makedirs(outdir, exist_ok=True)
-    sns.set(style="whitegrid")
+    def normalize_name(p):
+        p_str = str(p).lower()
+        if 'harare' in p_str: return 'Harare'
+        if 'bulawayo' in p_str: return 'Bulawayo'
+        return p
+    subset['Province'] = subset['Province'].apply(normalize_name)
 
-    # Figure 1: data flow (bar by source)
-    fig1_path = os.path.join(outdir, 'figure1.png')
-    vals = [
-        stats['collected_manually'],
-        stats['pushed_via_pipeline'],
-        stats['mobile_backups']
+    # 2. Aggregate
+    grouped = subset.groupby('Province')[['MRF', 'EHR']].sum().reset_index()
+    
+    # Create Total Row
+    total_row = pd.DataFrame({
+        'Province': ['Total'],
+        'MRF': [grouped['MRF'].sum()],
+        'EHR': [grouped['EHR'].sum()]
+    })
+    ordered_provinces = pd.concat([total_row, grouped], ignore_index=True)
+
+    # 3. Prepare Data
+    plot_df = ordered_provinces.melt(id_vars='Province', 
+                                     value_vars=['MRF', 'EHR'], 
+                                     var_name='Source', 
+                                     value_name='Count')
+    
+    # Calculate Concordance %
+    ordered_provinces['Concordance'] = ordered_provinces.apply(
+        lambda r: (r['EHR'] / r['MRF'] * 100) if r['MRF'] > 0 else 0, axis=1
+    )
+
+    x_order = ['Total'] + [p for p in target_provinces if p in grouped['Province'].unique()]
+
+    # 4. Plotting
+    sns.set(style='white')
+    # Increase figure width to accommodate the external legend
+    fig, ax1 = plt.subplots(figsize=(11, 6))
+
+    # --- LEFT AXIS: BARS ---
+    custom_colors = {'MRF': '#104E8B', 'EHR': '#00FF00'} # Royal Blue & Bright Green
+    
+    # We turn off the automatic legend here because we will build a custom one
+    sns.barplot(
+        x='Province', 
+        y='Count', 
+        hue='Source', 
+        data=plot_df, 
+        order=x_order,
+        palette=custom_colors, 
+        edgecolor="black",
+        ax=ax1
+    )
+    
+    # Remove default legend
+    if ax1.get_legend():
+        ax1.get_legend().remove()
+    
+    ax1.set_ylabel('Number of clients on ART', fontsize=12)
+    ax1.set_xlabel('Province', fontsize=12)
+    ax1.set_title('TX_CURR Concordance: MRF vs EHR', fontsize=14, pad=20)
+    
+    # Add Bar Labels
+    for container in ax1.containers:
+        ax1.bar_label(container, fmt='{:,.0f}', padding=3, fontsize=10)
+
+    # --- RIGHT AXIS: DIAMONDS ---
+    ax2 = ax1.twinx()
+    ax2.set_ylim(0, 115) # Keep scale for positioning
+    
+    # Extract y-values for the diamonds
+    y_values = []
+    for region in x_order:
+        val = ordered_provinces.loc[ordered_provinces['Province'] == region, 'Concordance'].values[0]
+        y_values.append(val)
+    
+    x_coords = range(len(x_order))
+    
+    # Plot Diamonds
+    ax2.plot(x_coords, y_values, color='#D62728', marker='D', markersize=8, linestyle='None')
+
+    # Add Percentage Labels above Diamonds
+    for x, y in zip(x_coords, y_values):
+        ax2.text(x, y + 4, f"{y:.1f}%", color='#D62728', ha='center', fontweight='bold', fontsize=11)
+
+    # --- CLEANUP & LEGEND ---
+    
+    # Hide the secondary axis visuals (ticks, numbers, spine)
+    ax2.set_yticks([])
+    ax2.set_ylabel('')
+    ax2.spines['right'].set_visible(False)
+    ax2.spines['top'].set_visible(False)
+    ax1.spines['top'].set_visible(False)
+    ax1.spines['right'].set_visible(False)
+
+    # Build Custom Legend (Key)
+    legend_elements = [
+        mpatches.Patch(facecolor='#104E8B', edgecolor='black', label='MRF'),
+        mpatches.Patch(facecolor='#00FF00', edgecolor='black', label='EHR'),
+        Line2D([0], [0], color='#D62728', marker='D', linestyle='None', markersize=8, label='Concordance')
     ]
-    plt.figure(figsize=(6,4))
-    plt.bar(['Manual', 'Pipeline', 'Mobile'], vals, color=['#4C78A8','#F58518','#54A24B'])
-    plt.title('COP24 Q4 IMPILO E-HR data flow')
-    plt.tight_layout(); plt.savefig(fig1_path, dpi=200); plt.close()
 
-    # Figure 2: proportion of facilities reporting by indicator
-    fig2_path = os.path.join(outdir, 'figure2.png')
-    labels = ['TX_CURR','TX_ML','TX_TB','HTS_TST/POS','PMTCT_STAT']
-    props = [
-        stats.get('prop_tx_curr',0),
-        stats.get('prop_tx_ml',0),
-        stats.get('prop_tx_tb',0),
-        stats.get('prop_hts_tst',0),
-        stats.get('prop_pmtct_stat',0)
-    ]
-    plt.figure(figsize=(6,4))
-    sns.barplot(x=labels, y=props, color="#4C78A8")
-    plt.ylim(0,100)
-    plt.title('Proportion of sites reporting by indicator')
-    plt.tight_layout(); plt.savefig(fig2_path, dpi=200); plt.close()
+    # Place legend outside to the right
+    ax1.legend(handles=legend_elements, title='Key', bbox_to_anchor=(1.02, 1), loc='upper left')
 
-    # Figure 3: simple trend placeholder — expects optional historical data in stats['trend']
-    fig3_path = os.path.join(outdir, 'figure3.png')
-    trend = stats.get('trend')
-    if trend is None:
-        trend = pd.DataFrame({
-            'Quarter': ['COP22','COP23','COP24Q3','COP24Q4'],
-            'Sites': [300, 380, 420, stats['ehr_facilities_analyzed']]
+    ax1.grid(True, axis='y', alpha=0.3)
+
+    plt.tight_layout()
+    plt.savefig(out_png, dpi=200, bbox_inches='tight') # bbox_inches ensures legend isn't cut off
+    plt.close()
+def aggregate_table3_data(df: pd.DataFrame) -> pd.DataFrame:
+    """Aggregate raw concordance data for Table 3."""
+    indicators = ['HTS_TST', 'HTS_POS', 'TX_NEW', 'TX_CURR']
+    data = []
+    for ind in indicators:
+        # Filter by indicator (case insensitive)
+        sub_df = df[df['Indicator'].astype(str).str.upper() == ind]
+        
+        mrf_sum = sub_df['MRF'].sum() if not sub_df.empty else 0
+        ehr_sum = sub_df['EHR'].sum() if not sub_df.empty else 0
+        
+        # Calculate concordance
+        conc = (ehr_sum / mrf_sum * 100) if mrf_sum > 0 else (100.0 if ehr_sum == 0 else 0.0)
+        
+        data.append({
+            "Indicator": ind,
+            "MRF/DHIS2": int(mrf_sum),
+            "E-HR": int(ehr_sum),
+            "Concordance": conc
         })
-    plt.figure(figsize=(6,4))
-    sns.lineplot(data=trend, x='Quarter', y='Sites', marker='o')
-    plt.title('Trends in sites successfully reporting')
-    plt.tight_layout(); plt.savefig(fig3_path, dpi=200); plt.close()
-
-    # Figure 4: TX_CURR sums by district for Harare & Bulawayo (proxy for concordance chart)
-    fig4_path = os.path.join(outdir, 'figure4.png')
-    sel = ehr_df[ehr_df['district'].isin(['Harare','Bulawayo'])]
-    if not sel.empty:
-        gb = sel.groupby('district', as_index=False)['TX_CURR'].sum()
-        plt.figure(figsize=(6,4))
-        sns.barplot(data=gb, x='district', y='TX_CURR', color='#54A24B')
-        plt.title('TX_CURR (E-HR sums) by district')
-        plt.tight_layout(); plt.savefig(fig4_path, dpi=200); plt.close()
-    else:
-        # fallback empty figure
-        plt.figure(figsize=(6,4)); plt.text(0.5,0.5,'No Harare/Bulawayo data', ha='center');
-        plt.axis('off'); plt.savefig(fig4_path, dpi=200); plt.close()
-
-    return {
-        'figure1': fig1_path,
-        'figure2': fig2_path,
-        'figure3': fig3_path,
-        'figure4': fig4_path
-    }
+    return pd.DataFrame(data)
 
 
-# -----------------------------
-# Table builders (Subdocuments)
-# -----------------------------
-
-def build_table1_subdoc(tpl, ehr_df):
+def build_overall_table_subdoc(tpl: DocxTemplate, agg_df: pd.DataFrame):
+    """Build Table 3 (Overall Concordance) as a subdocument."""
     sub = tpl.new_subdoc()
-    ind_cols = [c for c in ['HTS_TST','HTS_POS','TX_NEW','TX_CURR','TX_ML','TX_TB','PMTCT_STAT'] if c in ehr_df.columns]
-    cols = ['district','facility'] + ind_cols
-    table = sub.add_table(rows=1, cols=len(cols))
-    # Header
-    for j, h in enumerate(cols):
-        cell = table.rows[0].cells[j]
-        cell.text = h
-        for run in cell.paragraphs[0].runs:
-            run.bold = True
-    # Rows
-    view = ehr_df[cols].copy()
-    for _, row in view.iterrows():
-        cells = table.add_row().cells
-        cells[0].text = str(row['district'])
-        cells[1].text = str(row['facility'])
-        for k, c in enumerate(ind_cols, start=2):
-            try:
-                cells[k].text = thousands(row[c])
-            except Exception:
-                cells[k].text = '0'
-    return sub
-
-
-def build_table2_subdoc(tpl, optimized_df):
-    """Optimized sites concordance table with color-coded concordance cells.
-    Expects columns: district, facility,
-      HTS_TST_MRF, HTS_TST_EHR,
-      HTS_POS_MRF, HTS_POS_EHR,
-      TX_NEW_MRF, TX_NEW_EHR,
-      TX_CURR_MRF, TX_CURR_EHR
-    """
-    sub = tpl.new_subdoc()
-    if optimized_df is None or optimized_df.empty:
-        sub.add_paragraph('No optimized sites concordance file provided.')
+    if agg_df.empty:
+        sub.add_paragraph("No data available")
         return sub
 
-    cols = [
-        'district','facility',
-        'HTS_TST_MRF','HTS_TST_EHR','HTS_TST_CONC',
-        'HTS_POS_MRF','HTS_POS_EHR','HTS_POS_CONC',
-        'TX_NEW_MRF','TX_NEW_EHR','TX_NEW_CONC',
-        'TX_CURR_MRF','TX_CURR_EHR','TX_CURR_CONC'
-    ]
-    table = sub.add_table(rows=1, cols=len(cols))
-    for j, h in enumerate(cols):
-        cell = table.rows[0].cells[j]
-        cell.text = h
-        for run in cell.paragraphs[0].runs:
-            run.bold = True
+    # Create table
+    tbl = sub.add_table(rows=1, cols=4)
+    try:
+        tbl.style = 'Table Grid'
+    except KeyError:
+        pass
+        
+    headers = ["Indicator", "MRF/DHIS2", "E-HR", "Concordance"]
+    hdr_cells = tbl.rows[0].cells
+    for i, h in enumerate(headers):
+        hdr_cells[i].text = h
+        for p in hdr_cells[i].paragraphs:
+            for run in p.runs:
+                run.bold = True
 
-    for _, r in optimized_df.iterrows():
-        # compute per-indicator concordances
-        hts_tst_conc = concordance_pct(r.get('HTS_TST_MRF',0), r.get('HTS_TST_EHR',0))
-        hts_pos_conc = concordance_pct(r.get('HTS_POS_MRF',0), r.get('HTS_POS_EHR',0))
-        tx_new_conc  = concordance_pct(r.get('TX_NEW_MRF',0),  r.get('TX_NEW_EHR',0))
-        tx_curr_conc = concordance_pct(r.get('TX_CURR_MRF',0), r.get('TX_CURR_EHR',0))
-        row_cells = table.add_row().cells
-        values = [
-            r.get('district',''), r.get('facility',''),
-            thousands(r.get('HTS_TST_MRF',0)), thousands(r.get('HTS_TST_EHR',0)), f"{hts_tst_conc:.1f}%",
-            thousands(r.get('HTS_POS_MRF',0)), thousands(r.get('HTS_POS_EHR',0)), f"{hts_pos_conc:.1f}%",
-            thousands(r.get('TX_NEW_MRF',0)),  thousands(r.get('TX_NEW_EHR',0)),  f"{tx_new_conc:.1f}%",
-            thousands(r.get('TX_CURR_MRF',0)), thousands(r.get('TX_CURR_EHR',0)), f"{tx_curr_conc:.1f}%",
-        ]
-        for j, v in enumerate(values):
-            row_cells[j].text = str(v)
-        # Shade the concordance cells
-        for idx, pct in zip([4,7,10,13], [hts_tst_conc, hts_pos_conc, tx_new_conc, tx_curr_conc]):
-            color = color_for_conc(pct)
-            if color:
-                shade_cell(row_cells[idx], color)
+    for _, row in agg_df.iterrows():
+        row_cells = tbl.add_row().cells
+        row_cells[0].text = str(row["Indicator"])
+        row_cells[1].text = f"{int(row['MRF/DHIS2']):,}"
+        row_cells[2].text = f"{int(row['E-HR']):,}"
+        conc = row["Concordance"]
+        row_cells[3].text = f"{conc:.1f}%"
+        
+        # Color coding
+        color = get_concordance_color(conc)
+        if color:
+            shade_cell(row_cells[3], color)
+            
     return sub
 
 
-# -----------------------------
-# Main
-# -----------------------------
+def build_table2_subdoc(tpl: DocxTemplate, df: pd.DataFrame):
+    sub = tpl.new_subdoc()
+    if df.empty:
+        sub.add_paragraph("No data available")
+        return sub
+
+    # Add table
+    cols = 7  # Fixed columns: Facility, Province, District, Indicator, MRF, EHR, Concordance
+    tbl = sub.add_table(rows=1, cols=cols)
+    try:
+        tbl.style = 'Table Grid'
+    except KeyError:
+        pass
+
+    # Header
+    headers = ["Facility", "Province", "District", "Indicator", "MRF", "EHR", "Concordance_%"]
+    hdr_cells = tbl.rows[0].cells
+    for i, col in enumerate(headers):
+        hdr_cells[i].text = str(col)
+        for p in hdr_cells[i].paragraphs:
+            for run in p.runs:
+                run.bold = True
+
+    # Rows
+    for _, row_series in df.iterrows():
+        # Ensure we grab data in correct order
+        row_cells = tbl.add_row().cells
+        
+        # Map row_series data to fixed column order
+        row_data = [row_series.get(h, "") for h in headers]
+        
+        for i, val in enumerate(row_data):
+            txt = "" if pd.isna(val) else str(val)
+            if isinstance(val, float) and val.is_integer():
+                txt = str(int(val))
+            elif isinstance(val, float) and headers[i] == "Concordance_%":
+                txt = f"{val:.1f}%"
+                
+            row_cells[i].text = txt
+            
+            # Color coding for Concordance column
+            if headers[i] == "Concordance_%":
+                try:
+                    val_float = float(val)
+                    color = get_concordance_color(val_float)
+                    if color: shade_cell(row_cells[i], color)
+                    row_cells[i].text = f"{val_float:.1f}%"
+                except (ValueError, TypeError):
+                    pass
+    return sub
+
+
+def build_table1_subdoc(tpl: DocxTemplate, table_df: pd.DataFrame):
+    sub = tpl.new_subdoc()
+    # Create table with 4 columns
+    tbl = sub.add_table(rows=1, cols=4)
+    headers = ['Indicator', 'Number of facilities reporting', 'Target', 'Reporting Completeness']
+    for j, h in enumerate(headers):
+        cell = tbl.rows[0].cells[j]
+        cell.text = h
+        for run in cell.paragraphs[0].runs:
+            run.bold = True
+    # Add rows in the predefined order
+    for _, r in table_df.iterrows():
+        row = tbl.add_row().cells
+        row[0].text = str(r['Indicator'])
+        row[1].text = str(int(r['Number_of_facilities_reporting']))
+        row[2].text = str(int(r['Target']))
+        row[3].text = f"{r['Reporting_Completeness_%']}%"
+    return sub
+
 
 def main():
-    parser = argparse.ArgumentParser(description='Generate CDC quarterly narrative report (docxtpl).')
-    parser.add_argument('--template', default='cdc_template.docx', help='Word template with placeholders')
-    parser.add_argument('--ehr', required=True, help='Path to EHR Excel (IMPILO extract)')
-    parser.add_argument('--dhis2', required=True, help='Path to DHIS2/MRF Excel')
-    parser.add_argument('--optimized', default=None, help='Path to optimized sites concordance Excel (optional)')
-    parser.add_argument('--out', default='CDC_Report_Q4_rendered.docx', help='Output DOCX path')
-    parser.add_argument('--figdir', default='figures', help='Directory to save generated figures')
-    parser.add_argument('--quarter', default='COP24 Q4', help='Quarter label for captions if needed')
-
-    # Headline stats (override defaults from CLI)
-    parser.add_argument('--total-active-facilities', type=int, default=None)
-    parser.add_argument('--raw-data-sites', type=int, default=573)
-    parser.add_argument('--collected-manually', type=int, default=322)
-    parser.add_argument('--pushed-via-pipeline', type=int, default=81)
-    parser.add_argument('--mobile-backups', type=int, default=170)
-
+    parser = argparse.ArgumentParser(description='Generate CDC Report Figure 2 & Table 1 from Consistency Report.')
+    parser.add_argument('--consistency', required=True, help='Path to Consistency_Report Excel')
+    parser.add_argument('--concordance', help='Path to Concordance_Analysis_Complete Excel for Table 2')
+    parser.add_argument('--template', default='cdc_template.docx', help='Path to CDC report template DOCX (default: cdc_template.docx)')
+    parser.add_argument('--out', default=None, help='Output DOCX path (default: output/CDC_Report_<period>_<date>.docx)')
+    parser.add_argument('--period', default='COP24 Q4', help='Label used in figure title')
+    parser.add_argument('--outdir', default='output', help='Directory for generated assets')
     args = parser.parse_args()
 
-    # Load data
-    ehr = pd.read_excel(args.ehr, engine='openpyxl')
-    dhis2 = pd.read_excel(args.dhis2, engine='openpyxl')
-    optimized = None
-    if args.optimized and os.path.exists(args.optimized):
-        optimized = pd.read_excel(args.optimized, engine='openpyxl')
+    os.makedirs(args.outdir, exist_ok=True)
+    stamp = datetime.now().strftime('%Y-%m-%d')
 
-    # Sanity columns
-    required_cols = {'facility','district','HTS_TST','HTS_POS','TX_NEW','TX_CURR'}
-    if not required_cols.issubset(ehr.columns):
-        missing = ', '.join(sorted(required_cols - set(ehr.columns)))
-        sys.exit(f"EHR file missing required columns: {missing}")
-    if not required_cols.issubset(dhis2.columns):
-        missing = ', '.join(sorted(required_cols - set(dhis2.columns)))
-        sys.exit(f"DHIS2 file missing required columns: {missing}")
+    # Load consistency report
+    cons_df = load_consistency(args.consistency)
 
-    # Headline numbers
-    total_active_facilities = args.total_active_facilities or ehr['facility'].nunique()
-    raw_data_sites = args.raw_data_sites
-    collected_manually = args.collected_manually
-    pushed_via_pipeline = args.pushed_via_pipeline
-    mobile_backups = args.mobile_backups
+    # Build 21-indicator table
+    table_df = build_21_indicator_table(cons_df)
 
-    ehr_facilities_analyzed = ehr['facility'].nunique()
-    ehr_facilities_analyzed_pct = round(100 * ehr_facilities_analyzed / max(total_active_facilities,1), 1)
+    # Save CSV figure2_table1
+    csv_path = os.path.join(args.outdir, f'figure2_table1_{args.period.replace(" ", "")}_{stamp}.csv')
+    table_df.to_csv(csv_path, index=False)
 
-    def prop_reporting(df, col):
-        return round(100 * (df.groupby('facility')[col].sum() > 0).mean(), 1)
+    # Build Figure 2
+    fig_path = os.path.join(args.outdir, f'figure2_reporting_completeness_{args.period.replace(" ", "")}_{stamp}.png')
+    build_figure2(table_df, fig_path, args.period)
 
-    prop_tx_curr = prop_reporting(ehr, 'TX_CURR')
-    prop_tx_ml   = prop_reporting(ehr, 'TX_ML') if 'TX_ML' in ehr.columns else 0.0
-    prop_tx_tb   = prop_reporting(ehr, 'TX_TB') if 'TX_TB' in ehr.columns else 0.0
-    prop_hts_tst = prop_reporting(ehr, 'HTS_TST')  # HTS_TST/POS combined label uses HTS_TST base here
-    prop_pmtct_stat = prop_reporting(ehr, 'PMTCT_STAT') if 'PMTCT_STAT' in ehr.columns else 0.0
-
-    # Overall concordance (Table 3)
-    def sums(df, cols):
-        return {c: int(df[c].sum()) for c in cols}
-
-    cols = ['HTS_TST','HTS_POS','TX_NEW','TX_CURR']
-    mrf_sums = sums(dhis2, cols)
-    ehr_sums = sums(ehr, cols)
-
-    overall_hts_tst_conc = concordance_pct(mrf_sums['HTS_TST'], ehr_sums['HTS_TST'])
-    overall_hts_pos_conc = concordance_pct(mrf_sums['HTS_POS'], ehr_sums['HTS_POS'])
-    overall_tx_new_conc  = concordance_pct(mrf_sums['TX_NEW'],  ehr_sums['TX_NEW'])
-    overall_tx_curr_conc = concordance_pct(mrf_sums['TX_CURR'], ehr_sums['TX_CURR'])
-
-    stats = {
-        'total_active_facilities': total_active_facilities,
-        'raw_data_sites': raw_data_sites,
-        'collected_manually': collected_manually,
-        'pushed_via_pipeline': pushed_via_pipeline,
-        'mobile_backups': mobile_backups,
-        'ehr_facilities_analyzed': ehr_facilities_analyzed,
-        'ehr_facilities_analyzed_pct': ehr_facilities_analyzed_pct,
-        'prop_tx_curr': prop_tx_curr,
-        'prop_tx_ml': prop_tx_ml,
-        'prop_tx_tb': prop_tx_tb,
-        'prop_hts_tst': prop_hts_tst,
-        'prop_pmtct_stat': prop_pmtct_stat,
-    }
-
-    # Build figures
-    figs = build_figures(ehr, args.figdir, stats)
-
-    # Load template
+    # Load template and render
     tpl = DocxTemplate(args.template)
+    sub_table1 = build_table1_subdoc(tpl, table_df)
+    
+    sub_table2 = ""
+    table3_context = {}
+    fig4_path = ""
+    
+    if args.concordance:
+        conc_df = load_concordance(args.concordance)
+        
+        # Save Table 2 CSV (merging functionality from make_table2_concordance.py)
+        t2_csv = os.path.join(args.outdir, f'table2_concordance_{args.period.replace(" ", "")}_{stamp}.csv')
+        conc_df.to_csv(t2_csv, index=False)
+        print('Table 2 CSV:', t2_csv)
 
-    # Build subdocs (tables)
-    sub1 = build_table1_subdoc(tpl, ehr)
-    sub2 = build_table2_subdoc(tpl, optimized)
+        # Generate Table 3 Data & CSV
+        table3_df = aggregate_table3_data(conc_df)
+        t3_csv = os.path.join(args.outdir, f'table3_overall_concordance_{args.period.replace(" ", "")}_{stamp}.csv')
+        table3_df.to_csv(t3_csv, index=False)
+        print('Table 3 CSV:', t3_csv)
 
-    # Context for template rendering
+        sub_table2 = build_table2_subdoc(tpl, conc_df)
+        table3_context = compute_table3_context(conc_df)
+        
+        fig4_path = os.path.join(args.outdir, f'figure4_concordance_{args.period.replace(" ", "")}_{stamp}.png')
+        build_figure4(conc_df, fig4_path)
+
     context = {
-        # Header counts
-        'total_active_facilities': total_active_facilities,
-        'raw_data_sites': raw_data_sites,
-        'collected_manually': collected_manually,
-        'pushed_via_pipeline': pushed_via_pipeline,
-        'mobile_backups': mobile_backups,
-        'ehr_facilities_analyzed': ehr_facilities_analyzed,
-        'ehr_facilities_analyzed_pct': ehr_facilities_analyzed_pct,
-        # Data Quality Metrics proportions
-        'prop_tx_curr': prop_tx_curr,
-        'prop_tx_ml': prop_tx_ml,
-        'prop_tx_tb': prop_tx_tb,
-        'prop_hts_tst': prop_hts_tst,
-        'prop_pmtct_stat': prop_pmtct_stat,
-        # Narrative text placeholders (adjust as needed)
-        'challenge_database_collection': (
-            'Onboarding more facilities to the automated data pipeline and improving the mobile application '
-            'to reduce manual intervention; addressing network selection issues and ensuring complete uploads.'
-        ),
-        'challenge_data_extraction': (
-            'Higher success for manual/dpl backups compared to mobile uploads due to slow central network performance; '
-            'large facilities may require batch processing to avoid memory failures.'
-        ),
-        'remedial_point_1': 'Continue downloading and reprocessing missing data from the central repository.',
-        'remedial_point_2': 'Generate data in smaller batches for large facilities to avoid memory-related failures.',
-        'remedial_point_3': 'Strengthen mentorship and power backup at facilities.',
-        # Overall concordance (Table 3)
-        'overall_hts_tst_mrf': f"{mrf_sums['HTS_TST']:,}",
-        'overall_hts_tst_ehr': f"{ehr_sums['HTS_TST']:,}",
-        'overall_hts_tst_conc': overall_hts_tst_conc,
-        'overall_hts_pos_mrf': f"{mrf_sums['HTS_POS']:,}",
-        'overall_hts_pos_ehr': f"{ehr_sums['HTS_POS']:,}",
-        'overall_hts_pos_conc': overall_hts_pos_conc,
-        'overall_tx_new_mrf': f"{mrf_sums['TX_NEW']:,}",
-        'overall_tx_new_ehr': f"{ehr_sums['TX_NEW']:,}",
-        'overall_tx_new_conc': overall_tx_new_conc,
-        'overall_tx_curr_mrf': f"{mrf_sums['TX_CURR']:,}",
-        'overall_tx_curr_ehr': f"{ehr_sums['TX_CURR']:,}",
-        'overall_tx_curr_conc': overall_tx_curr_conc,
-        # Subdocs for tables
-        'table1_indicators': sub1,
-        'table2_concordance_facility': sub2,
-        # Figures (InlineImage)
-        'figure1': InlineImage(tpl, figs['figure1'], width=Mm(140)),
-        'figure2': InlineImage(tpl, figs['figure2'], width=Mm(140)),
-        'figure3': InlineImage(tpl, figs['figure3'], width=Mm(140)),
-        'figure4': InlineImage(tpl, figs['figure4'], width=Mm(140)),
+        'figure2': InlineImage(tpl, fig_path, width=Mm(140)),
+        'table1_indicators': sub_table1,
+        'table2_concordance_facility': sub_table2,
+        'figure4': '',  # Default empty if not generated
+        **table3_context
     }
-
+    
+    if fig4_path and os.path.exists(fig4_path):
+        context['figure4'] = InlineImage(tpl, fig4_path, width=Mm(140))
+        
     tpl.render(context)
-    tpl.save(args.out)
-    print(f"CDC report rendered: {args.out}")
 
+    out_docx = args.out or os.path.join(args.outdir, f'CDC_Report_{args.period.replace(" ", "")}_{stamp}.docx')
+    tpl.save(out_docx)
+    print('Figure 2 PNG:', fig_path)
+    if fig4_path:
+        print('Figure 4 PNG:', fig4_path)
+    print('Table 1 CSV:', csv_path)
+    print('Rendered report:', out_docx)
 
 if __name__ == '__main__':
     main()

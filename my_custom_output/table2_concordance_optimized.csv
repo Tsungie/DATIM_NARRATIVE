@@ -1,0 +1,450 @@
+Facility,Province,District,DATIM TX_CURR,MRF TX_CURR,DATIM HTS_TX_NEW (Total Tests),MRF HTS_TX_NEW (Total Tests),DATIM HTS_TX_NEW (Total Positives),MRF HTS_TX_NEW (Total Positives),DATIM HTS_TX_NEW (Total Initiations),MRF HTS_TX_NEW (Total Initiations),DATIM PMTCT (Total Pregnant women Initiated on ART),MRF PMTCT (Total Pregnant women Initiated on ART),MRF PMTCT (Pregnant women newly testing HIV+ in ANC),MRF PMTCT (Pregnant women HIV+ at retest in ANC),MRF PMTCT (Pregnant women HIV+ at first test in LD),MRF PMTCT (Pregnant women HIV+ at retest in LD),DATIM PMTCT (HIV Exposed Infants Testing HIV+),MRF PMTCT (HIV Exposed Infants Testing HIV+),DATIM PMTCT (Infants initiated on ART),MRF PMTCT (Infants initiated on ART)
+Alaska - 100005 - Clinic,Mashonaland West,Makonde,561.0,1028.0,0,430.0,0,16.0,3.0,17.0,0.0,4.0,4.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+Amazon Clinic,Matabeleland South,Insiza,409.0,473.0,139,168.0,18,20.0,15.0,21.0,6.0,5.0,5.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0
+Arcadia - 100015 - Clinic,Harare Metropolitan,Harare City,603.0,973.0,69,168.0,14,12.0,3.0,10.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Avondale - 100030 - Clinic,Harare Metropolitan,Harare City,1274.0,1314.0,158,234.0,6,12.0,4.0,12.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Bakasa - 100035 - Clinic,Mashonaland Central,Guruve,500.0,479.0,248,267.0,3,3.0,4.0,4.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Balanda - 100037 - Rural Health Centre,Matabeleland North,Bubi,123.0,356.0,38,165.0,0,4.0,2.0,5.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Bango - 100042 - Clinic,Matabeleland South,Mangwe,595.0,601.0,39,134.0,1,2.0,2.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Banket - 100044 - District Hospital,Mashonaland West,Zvimba,2250.0,0.0,864,1499.0,31,58.0,8.0,50.0,0.0,7.0,7.0,2.0,0.0,0.0,0.0,1.0,0.0,1.0
+Beatrice Infectious - 100050 - Hospital,Harare Metropolitan,Harare City,1233.0,3032.0,52,118.0,11,14.0,8.0,9.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Belvedere - 100055 - Poly clinic,Harare Metropolitan,Harare City,400.0,1840.0,123,194.0,18,15.0,7.0,22.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Bemba Clinic,Matabeleland North,Tsholotsho,137.0,219.0,13,18.0,2,3.0,2.0,3.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Bepura Clinic,Mashonaland Central,Guruve,718.0,1056.0,215,632.0,4,8.0,5.0,8.0,0.0,5.0,4.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+Berejena - 100060 - Mission Clinic,Masvingo,Chivi,834.0,801.0,186,165.0,4,5.0,5.0,5.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Beugest Clinic,Mashonaland West,Hurungwe,2.0,272.0,8,176.0,1,4.0,0.0,4.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Bezu - 100066 - Clinic,Matabeleland South,Bulilima,12.0,473.0,22,85.0,0,6.0,5.0,6.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Bhekeni Clinic,Matabeleland North,Umguza,244.0,250.0,25,128.0,7,9.0,10.0,9.0,0.0,3.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Bondolfi - 100082 - Rural Hospital,Masvingo,Masvingo,584.0,586.0,10,173.0,0,5.0,2.0,5.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Border Church Rural Health Centre,Mashonaland East,Marondera,470.0,543.0,85,97.0,5,7.0,6.0,7.0,1.0,3.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Borera - 100084 - Clinic,Mashonaland East,Uzumba Maramba Pfungwe,1.0,292.0,0,348.0,0,2.0,0.0,2.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Borrowdale - 100086 - Clinic,Harare Metropolitan,Harare City,1199.0,1268.0,225,276.0,9,9.0,7.0,5.0,1.0,0.0,0.0,11.0,0.0,0.0,0.0,0.0,0.0,0.0
+Bota - 100088 - Clinic,Masvingo,Zaka,604.0,1822.0,0,431.0,0,19.0,0.0,18.0,0.0,4.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Boterere - 100089 - Rural Health Centre,Masvingo,Mwenezi,13.0,590.0,22,28.0,0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Braeside - 100091 - Clinic,Harare Metropolitan,Harare City,286.0,509.0,150,590.0,9,14.0,5.0,14.0,0.0,6.0,6.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Brandon - 100092 - Clinic,Mashonaland Central,Guruve,422.0,404.0,189,276.0,2,3.0,3.0,3.0,6.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Bubude - 100096 - Clinic,Matabeleland North,Tsholotsho,372.0,1028.0,10,159.0,0,10.0,0.0,10.0,0.0,2.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Budiriro - 100098 - Poly Clinic,Harare Metropolitan,Harare City,40.0,5331.0,678,2445.0,26,52.0,1.0,59.0,0.0,10.0,10.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Budiriro - 101889 - Satelite Clinic,Harare Metropolitan,Harare City,107.0,1533.0,8,1006.0,1,38.0,0.0,44.0,0.0,4.0,4.0,70.0,0.0,0.0,0.0,0.0,0.0,0.0
+Burma Valley Clinic,Manicaland,Mutare,4.0,492.0,20,247.0,1,5.0,0.0,5.0,1.0,2.0,14.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+Buvuma - 100107 - Clinic,Matabeleland South,Gwanda,834.0,914.0,65,63.0,5,6.0,7.0,6.0,4.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Bveke - 100108 - Clinic,Mashonaland Central,Mount Darwin,441.0,474.0,77,130.0,0,2.0,3.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Bvukururu - 100110 - Clinic,Masvingo,Zaka,780.0,783.0,125,157.0,4,4.0,5.0,5.0,6.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Chabwino Clinic,Mashonaland East,Goromonzi,3.0,263.0,0,257.0,0,10.0,0.0,10.0,0.0,1.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+Chamunangana - 100132 - Clinic,Matabeleland South,Beitbridge,671.0,649.0,74,60.0,3,3.0,3.0,3.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Chapoto - 100135 - Clinic,Mashonaland Central,Mbire,73.0,184.0,22,156.0,1,3.0,1.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Chatikobo - 100144 - Clinic,Masvingo,Masvingo,0.0,388.0,0,115.0,0,2.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Chefunye - 100152 - Council Clinic,Matabeleland North,Tsholotsho,342.0,473.0,111,184.0,7,9.0,6.0,10.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,1.0
+Chegutu - 100153 - District Hospital,Mashonaland West,Chegutu,2358.0,1405.0,281,1746.0,35,96.0,7.0,85.0,0.0,18.0,18.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Chemahororo - 100156 - Clinic,Midlands,Gokwe South,1.0,678.0,48,342.0,0,12.0,0.0,10.0,0.0,3.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Cheshuro - 100161 - Clinic,Masvingo,Gutu,382.0,669.0,34,154.0,0,2.0,1.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Cheziya - 100162 - Clinic,Midlands,Gokwe South,311.0,2025.0,56,661.0,2,23.0,3.0,22.0,0.0,3.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Chidamoyo - 100169 - Mission Hospital,Mashonaland West,Hurungwe,361.0,2034.0,117,761.0,1,10.0,2.0,12.0,7.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Chikanga - 100182 - Clinic,Manicaland,Mutare,816.0,1094.0,588,570.0,13,12.0,5.0,12.0,5.0,2.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Chikombedzi - 100188 - Hospital,Masvingo,Chiredzi,427.0,635.0,262,311.0,1,3.0,2.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Chikonohono - 100190 - Clinic,Mashonaland West,Makonde,165.0,2008.0,338,414.0,9,12.0,0.0,13.0,0.0,10.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Chikuhwa - 100193 - Rural Health Centre,Mashonaland East,Uzumba Maramba Pfungwe,0.0,345.0,0,171.0,0,4.0,0.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,1.0
+Chikwaka - 100198 - Rural Hospital,Mashonaland East,Goromonzi,926.0,889.0,119,352.0,12,22.0,19.0,21.0,4.0,3.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Chikwariro - 100201 - Mission Hospital,Manicaland,Mutare,44.0,303.0,28,30.0,3,3.0,3.0,3.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Chilonga - 100206 - Clinic,Masvingo,Chiredzi,336.0,659.0,52,192.0,0,6.0,3.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Chimombe - 100215 - Rural Hospital,Masvingo,Gutu,205.0,949.0,108,258.0,4,5.0,0.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Chinamasa - 100217 - Clinic,Manicaland,Mutasa,272.0,436.0,62,105.0,1,4.0,2.0,3.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Chinamhora - 100219 - Clinic,Mashonaland East,Goromonzi,690.0,2309.0,28,2332.0,8,79.0,20.0,77.0,1.0,18.0,17.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+Chinengundu Clinic,Mashonaland West,Chegutu,1663.0,1584.0,575,701.0,21,22.0,20.0,21.0,19.0,7.0,7.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Chingwizi - 100230 - Satelite Clinic,Masvingo,Mwenezi,322.0,1235.0,309,382.0,5,10.0,3.0,10.0,8.0,4.0,1.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+Chinhere - 100232 - Council Clinic,Mashonaland West,Hurungwe,137.0,572.0,0,371.0,0,3.0,2.0,3.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Chinhoyi Clinic - 100233 - Clinic,Mashonaland West,Makonde,1893.0,2336.0,116,274.0,7,10.0,3.0,10.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Chinyika - 100242 - Clinic,Mashonaland East,Goromonzi,1297.0,1318.0,440,666.0,25,28.0,27.0,27.0,13.0,5.0,9.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Chinyika - 100243 - Rural Health Centre,Masvingo,Gutu,520.0,719.0,76,148.0,1,3.0,3.0,3.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Chiota - 100247 - Rural Hospital,Mashonaland East,Marondera,743.0,1159.0,14,299.0,0,13.0,3.0,12.0,0.0,2.0,2.0,0.0,0.0,16.0,0.0,1.0,0.0,0.0
+Chiparawe - 100250 - Clinic,Mashonaland East,Marondera,58.0,809.0,53,323.0,2,8.0,0.0,8.0,1.0,2.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Chipendeke - 100251 - Rural Health Centre,Manicaland,Mutare,88.0,115.0,28,62.0,0,1.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Chipfatsura - 100252 - Clinic,Manicaland,Mutare,206.0,320.0,60,92.0,0,1.0,0.0,1.0,3.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Chipfuwamiti Clinic,Mashonaland West,Makonde,0.0,77.0,0,5.0,0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Chipiwa - 100259 - Clinic,Masvingo,Chiredzi,195.0,619.0,111,410.0,6,16.0,6.0,18.0,1.0,3.0,4.0,0.0,0.0,0.0,0.0,1.0,0.0,1.0
+Chiredzana - 100263 - Clinic,Masvingo,Zaka,2.0,770.0,100,204.0,1,3.0,0.0,3.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Chiredzi - 100264 - Hospital,Masvingo,Chiredzi,67.0,4707.0,0,1759.0,0,62.0,0.0,59.0,0.0,11.0,9.0,0.0,0.0,1.0,0.0,4.0,0.0,3.0
+Chirundu - 100275 - Clinic,Mashonaland West,Hurungwe,317.0,378.0,113,243.0,1,6.0,3.0,7.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Chitowa 1 Clinic,Mashonaland East,Murewa,161.0,182.0,38,46.0,3,3.0,2.0,3.0,1.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Chitowa 2 Clinic,Mashonaland East,Murewa,191.0,441.0,73,108.0,2,3.0,5.0,3.0,1.0,1.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Chitse - 100302 - Clinic,Mashonaland Central,Mount Darwin,813.0,858.0,408,502.0,12,12.0,8.0,12.0,9.0,3.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Chituripasi - 100308 - Rural Health Centre,Matabeleland South,Beitbridge,299.0,338.0,89,132.0,5,5.0,5.0,5.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Chiundura - 100309 - Clinic,Midlands,Gweru,514.0,631.0,93,109.0,2,4.0,4.0,4.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Chivende - 100311 - Clinic,Mashonaland West,Hurungwe,134.0,522.0,300,388.0,4,6.0,5.0,2.0,4.0,1.0,0.0,1.0,0.0,1.0,0.0,0.0,0.0,0.0
+Chivi - 100317 - District Hospital,Masvingo,Chivi,82.0,2347.0,0,2089.0,0,52.0,0.0,50.0,0.0,2.0,0.0,2.0,0.0,0.0,0.0,2.0,0.0,2.0
+Chivi - 100318 - Mission Clinic,Masvingo,Chivi,179.0,624.0,23,106.0,4,6.0,3.0,6.0,2.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Chivi - 100319 - Rural Hospital,Masvingo,Chivi,185.0,1260.0,188,437.0,16,21.0,0.0,21.0,2.0,4.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Chiwere - 100323 - Rural Health Centre,Manicaland,Mutare,0.0,296.0,0,209.0,0,7.0,0.0,7.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Chizvirizvi - 100329 - Clinic,Masvingo,Chiredzi,241.0,266.0,86,136.0,4,3.0,4.0,5.0,3.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Christon Bank - 100332 - Clinic,Mashonaland Central,Mazowe,473.0,527.0,114,212.0,3,3.0,3.0,3.0,0.0,2.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Chundu - 100334 - Council Clinic,Mashonaland West,Hurungwe,852.0,868.0,416,592.0,3,4.0,2.0,4.0,2.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Connemara - 100347 - Clinic,Midlands,Gweru,285.0,287.0,34,55.0,1,2.0,1.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Cowdray Park - 100348 - Clinic,Bulawayo Metropolitan,Emakhandeni,1854.0,2252.0,907,1169.0,54,59.0,24.0,49.0,5.0,8.0,8.0,0.0,0.0,0.0,3.0,4.0,1.0,1.0
+Cowdry Park Health Centre,Bulawayo Metropolitan,Emakhandeni,250.0,332.0,790,1039.0,40,58.0,20.0,52.0,0.0,2.0,2.0,0.0,0.0,0.0,0.0,1.0,0.0,1.0
+Dakamela - 100357 - Rural Hospital,Matabeleland North,Nkayi,512.0,875.0,283,177.0,10,10.0,7.0,3.0,6.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Dambridge - 100362 - Clinic,Midlands,Kwekwe,11.0,645.0,0,107.0,0,6.0,0.0,5.0,0.0,2.0,1.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0
+Dangamvura - 100366 - Clinic,Manicaland,Mutare,2022.0,2119.0,351,581.0,12,19.0,16.0,20.0,1.0,3.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Devure - 100387 - Mission Clinic,Masvingo,Gutu,202.0,488.0,13,109.0,0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Dewe - 100389 - Clinic,Mashonaland East,Uzumba Maramba Pfungwe,67.0,98.0,67,62.0,4,4.0,3.0,4.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Dimbiti - 100390 - Rural Health Centre,Mashonaland East,Marondera,74.0,744.0,1,316.0,1,7.0,0.0,8.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Dingumuzi - 100394 - Clinic,Matabeleland South,Mangwe,600.0,677.0,233,304.0,16,19.0,16.0,19.0,0.0,6.0,5.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+Dlamini - 100396 - Council Clinic,Matabeleland North,Tsholotsho,538.0,542.0,143,143.0,2,3.0,2.0,2.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Doma - 100397 - Clinic,Mashonaland West,Makonde,37.0,630.0,52,462.0,2,5.0,0.0,5.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Dombotombo - 100401 - Clinic,Mashonaland East,Marondera,768.0,0.0,50,1385.0,1,28.0,0.0,26.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Dora - 100411 - Clinic,Manicaland,Mutare,469.0,491.0,41,310.0,4,8.0,4.0,8.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Doro - 100413 - Clinic,Mashonaland West,Hurungwe,279.0,803.0,3,462.0,1,9.0,1.0,7.0,1.0,1.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+Dotito - 100416 - Clinic,Mashonaland Central,Mount Darwin,410.0,1315.0,21,596.0,1,7.0,0.0,8.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Dr. Shennan - 100418 - Clinic,Bulawayo Metropolitan,Nkulumane,845.0,861.0,258,309.0,12,13.0,11.0,17.0,6.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Dula Clinic,Matabeleland South,Umzingwane,195.0,205.0,25,59.0,1,2.0,1.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Dzivarasekwa Extension - 100428 - Clinic,Mashonaland West,Zvimba,187.0,1705.0,74,730.0,11,34.0,2.0,32.0,1.0,8.0,9.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+Eastly - 100433 - Clinic,Harare Metropolitan,Harare City,21.0,275.0,45,148.0,1,3.0,0.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,1.0
+Emakhandeni - 100443 - Clinic,Bulawayo Metropolitan,Emakhandeni,2743.0,4404.0,865,720.0,34,31.0,9.0,18.0,6.0,6.0,6.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Embakwe - 100444 - Mission Hospital,Matabeleland South,Mangwe,366.0,450.0,32,55.0,2,3.0,4.0,3.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Emganwini Clinic,Bulawayo Metropolitan,Nkulumane,17.0,18.0,49,288.0,0,4.0,0.0,4.0,1.0,4.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Empandeni - 100445 - Clinic,Matabeleland South,Mangwe,763.0,1039.0,94,131.0,1,3.0,1.0,3.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Entumbane - 100449 - Clinic,Bulawayo Metropolitan,Northern Suburbs,2097.0,2340.0,262,440.0,19,21.0,18.0,19.0,5.0,2.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Epworth - 100451 - Poly Clinic,Harare Metropolitan,Epworth,,11460.0,436,4166.0,98,156.0,,140.0,,22.0,11.0,10.0,7.0,0.0,,5.0,,5.0
+Epworth - 100452 - Mission Clinic,Harare Metropolitan,Epworth,1429.0,2940.0,198,501.0,27,62.0,23.0,63.0,0.0,6.0,8.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Esigodini District Hospital,Matabeleland South,Umzingwane,1010.0,1373.0,323,398.0,11,12.0,4.0,14.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Exchange - 100457 - Clinic,Midlands,Kwekwe,1.0,413.0,1,39.0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Famona Clinic,Matabeleland North,Bubi,44.0,310.0,133,393.0,7,10.0,2.0,11.0,0.0,2.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Faversham - 100465 - Clinic,Masvingo,Chiredzi,359.0,412.0,50,103.0,0,6.0,4.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Florida - 100472 - Clinic,Manicaland,Mutare,179.0,362.0,36,127.0,0,2.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+GSU Clinic,Matabeleland South,Insiza,102.0,117.0,94,97.0,1,3.0,3.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Gamanya - 100484 - Clinic,Mashonaland East,Chikomba,303.0,0.0,99,0.0,4,0.0,2.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Glen Norah - 100506 - Satellite clinic,Harare Metropolitan,Harare City,316.0,2349.0,40,266.0,26,34.0,16.0,24.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Glenview Poly,Harare Metropolitan,Harare City,4929.0,5625.0,714,2263.0,53,134.0,1.0,133.0,3.0,16.0,14.0,0.0,2.0,0.0,0.0,1.0,0.0,1.0
+Gokwe - 100513 - District Hospital,Midlands,Gokwe South,1117.0,2547.0,179,1397.0,7,18.0,4.0,18.0,1.0,2.0,0.0,2.0,0.0,0.0,0.0,1.0,0.0,1.0
+Gonono - 100519 - Clinic,Mashonaland Central,Mbire,94.0,105.0,102,167.0,1,2.0,1.0,2.0,0.0,1.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Greendale - 100535 - Clinic,Harare Metropolitan,Harare City,223.0,324.0,85,182.0,0,2.0,1.0,2.0,0.0,1.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Gumbo - 100541 - Clinic,,,836.0,,163,,3,,2.0,,0.0,,,,,,0.0,,0.0,
+Gunde - 100545 - Clinic,Midlands,Gweru,522.0,539.0,39,70.0,4,5.0,5.0,6.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Gutu - 100557 - Mission Hospital,Masvingo,Gutu,412.0,1360.0,129,463.0,6,20.0,6.0,19.0,0.0,4.0,2.0,0.0,54.0,2.0,0.0,0.0,0.0,0.0
+Gutu Rural - 100558 - Clinic,Masvingo,Gutu,1398.0,2620.0,4,1849.0,2,35.0,0.0,37.0,0.0,5.0,6.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+Guwa - 100559 - Clinic,Masvingo,Masvingo,0.0,510.0,0,194.0,0,5.0,0.0,5.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Gwaai Rural Health Centre,Matabeleland North,Lupane,221.0,223.0,56,76.0,3,4.0,2.0,4.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Gwanyika - 100562 - Rural Health Centre,Midlands,Gokwe South,405.0,524.0,199,402.0,3,3.0,1.0,2.0,3.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Gwatemba - 100566 - Rural Health Centre,Matabeleland South,Insiza,189.0,432.0,1,81.0,0,9.0,1.0,8.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Gweru - 100572 - Provincial Hospital,Midlands,Gweru,2908.0,4228.0,38,1576.0,20,75.0,41.0,74.0,0.0,12.0,0.0,2.0,9.0,1.0,0.0,4.0,0.0,4.0
+Habane Clinic,Matabeleland South,Umzingwane,226.0,543.0,0,102.0,0,5.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Harava - 100583 - Rural Health Centre,Masvingo,Zaka,455.0,591.0,74,164.0,3,3.0,2.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Hatcliffe - 100584 - Poly clinic,Harare Metropolitan,Harare City,3494.0,5236.0,143,2249.0,36,54.0,27.0,60.0,2.0,6.0,6.0,0.0,4.0,0.0,0.0,0.0,0.0,2.0
+Hatfield - 100585 - Clinic,Harare Metropolitan,Harare City,323.0,2717.0,90,1130.0,6,19.0,0.0,21.0,0.0,2.0,71.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Hesketh - 100591 - Council Clinic,Mashonaland West,Hurungwe,251.0,564.0,42,299.0,3,7.0,3.0,5.0,3.0,2.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Hewiyai - 100592 - Council Clinic,Mashonaland West,Hurungwe,237.0,510.0,9,223.0,2,3.0,1.0,3.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Highfields Polyclinic,Harare Metropolitan,Harare City,3854.0,4682.0,226,1405.0,20,67.0,33.0,67.0,3.0,9.0,8.0,1.0,0.0,0.0,3.0,1.0,2.0,1.0
+Highlands - 100596 - Clinic,Harare Metropolitan,Harare City,6.0,112.0,71,103.0,4,4.0,3.0,3.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Highlands PCC,Harare Metropolitan,Harare City,267.0,2064.0,90,187.0,11,17.0,2.0,15.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Hingwe - 100598 - Clinic,Matabeleland South,Bulilima,1217.0,1301.0,58,116.0,7,10.0,9.0,10.0,4.0,3.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Hob House - 100601 - Clinic,Manicaland,Mutare,498.0,583.0,321,414.0,5,9.0,3.0,8.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Hombiro Clinic,Mashonaland East,Uzumba Maramba Pfungwe,0.0,152.0,0,93.0,0,1.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Hopley,Harare Metropolitan,Harare City,2754.0,4687.0,215,2080.0,21,177.0,19.0,143.0,1.0,26.0,26.0,7.0,0.0,0.0,0.0,0.0,0.0,0.0
+Howard - 100611 - Mission Hospital,Mashonaland Central,Mazowe,48.0,2153.0,0,922.0,0,26.0,0.0,22.0,0.0,4.0,3.0,3.0,0.0,0.0,0.0,3.0,0.0,2.0
+Hurungwe - 100619 - Rural Hospital,Mashonaland West,Hurungwe,2035.0,0.0,753,1080.0,16,13.0,12.0,13.0,13.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Inamo Farming Clinic,Mashonaland West,Zvimba,196.0,238.0,117,127.0,5,5.0,5.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Ingwizi - 100639 - Clinic,Matabeleland South,Mangwe,1145.0,1311.0,137,173.0,5,8.0,7.0,8.0,4.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Insiza PBS - 100640 - Clinic,Matabeleland South,Insiza,86.0,830.0,24,207.0,0,18.0,3.0,18.0,1.0,3.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Iron Duke Clinic,Mashonaland Central,Mazowe,160.0,252.0,27,137.0,7,11.0,1.0,11.0,0.0,2.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Isabella Mine - 100647 - Mine Clinic,Matabeleland North,Bubi,0.0,0.0,0,5.0,0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Jari - 100655 - Council Clinic,Mashonaland West,Zvimba,233.0,317.0,74,62.0,6,7.0,5.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Jerera - 100659 - Satelite Clinic,Masvingo,Zaka,2.0,0.0,0,412.0,0,8.0,0.0,10.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Jimila - 100663 - Clinic,Matabeleland North,Tsholotsho,1113.0,1089.0,296,440.0,13,14.0,16.0,12.0,2.0,2.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+John Reimer - 100668 - Clinic,Mashonaland East,Goromonzi,443.0,669.0,144,188.0,2,6.0,0.0,6.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Jotsholo - 100675 - Clinic,Matabeleland North,Lupane,1241.0,1443.0,245,361.0,7,7.0,6.0,7.0,7.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+KWEKWE - 100754 - District Hospital,Midlands,Kwekwe,1340.0,1700.0,86,1606.0,1,35.0,13.0,29.0,0.0,5.0,2.0,1.0,2.0,2.0,0.0,1.0,0.0,1.0
+Kachuta - 100679 - Clinic,Mashonaland Central,Guruve,484.0,484.0,231,306.0,3,4.0,5.0,4.0,4.0,2.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Kadenge - 100680 - Rural Health Centre,Mashonaland East,Murewa,437.0,546.0,224,231.0,8,7.0,7.0,9.0,4.0,2.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Kadzere - 100686 - Clinic,Mashonaland East,Murewa,842.0,894.0,113,126.0,5,5.0,4.0,5.0,2.0,2.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Kafura - 100688 - Rural Health Centre,Mashonaland East,Uzumba Maramba Pfungwe,167.0,273.0,66,72.0,0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Kafusi - 100689 - Clinic,Matabeleland South,Gwanda,144.0,872.0,13,99.0,0,3.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Kambuzuma - 100695 - Poly clinic,Harare Metropolitan,Harare City,0.0,3065.0,0,537.0,0,26.0,0.0,24.0,0.0,7.0,6.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+Kamonde - 100696 - Clinic,Mashonaland West,Makonde,6.0,287.0,17,97.0,0,3.0,0.0,3.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Kamusasa - 100697 - Clinic,Mashonaland Central,Guruve,236.0,299.0,95,171.0,0,3.0,1.0,3.0,2.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Kamutsenzere - 100698 - Clinic,Mashonaland Central,Mount Darwin,547.0,558.0,239,237.0,1,2.0,0.0,2.0,2.0,2.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Kamuzingizi - 101919 - Council Clinic,Mashonaland West,Makonde,177.0,219.0,49,77.0,0,5.0,9.0,5.0,5.0,1.0,0.0,0.0,1.0,0.0,0.0,1.0,0.0,0.0
+Kanyandavu Rural Health Centre,Matabeleland North,Lupane,40.0,413.0,154,150.0,5,5.0,2.0,5.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Kanyanga - 100702 - Clinic,Mashonaland West,Makonde,743.0,884.0,21,518.0,2,20.0,12.0,13.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Kapane Clinic,Matabeleland North,Tsholotsho,49.0,314.0,70,88.0,1,1.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Kapfunde - 100706 - Council Clinic,Mashonaland West,Hurungwe,699.0,683.0,364,420.0,2,2.0,2.0,2.0,2.0,2.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Karanda - 100709 - Mission Hospital,Mashonaland Central,Mount Darwin,813.0,813.0,560,822.0,33,44.0,4.0,39.0,7.0,4.0,3.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+Karimbika - 100713 - Rural Health Centre,Mashonaland East,Uzumba Maramba Pfungwe,0.0,341.0,0,60.0,0,5.0,0.0,5.0,0.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+Karoi - 100715 - District Hospital,Mashonaland West,Hurungwe,2999.0,9036.0,577,5521.0,39,156.0,0.0,143.0,0.0,22.0,12.0,0.0,2.0,2.0,0.0,2.0,0.0,2.0
+Karoi Static -101847 - Clinic,Mashonaland West,Hurungwe,1982.0,2542.0,882,1266.0,24,34.0,33.0,33.0,6.0,7.0,7.0,0.0,0.0,0.0,6.0,2.0,2.0,2.0
+Karuru Clinic,Mashonaland West,Hurungwe,6.0,416.0,1,148.0,0,3.0,0.0,3.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Katanga utano - 100719 - Municipality,Mashonaland West,Chegutu,870.0,1950.0,383,873.0,21,51.0,0.0,46.0,8.0,5.0,5.0,0.0,0.0,0.0,0.0,2.0,0.0,2.0
+Kazangarare - 100727 - Gvt Council,Mashonaland West,Hurungwe,505.0,805.0,134,677.0,3,4.0,0.0,3.0,2.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Kenzamba - 100731 - Clinic,Mashonaland West,Makonde,34.0,630.0,0,175.0,0,5.0,1.0,5.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Khami - 100733 - Clinic,Bulawayo Metropolitan,Northern Suburbs,2215.0,3250.0,467,579.0,44,39.0,19.0,23.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Khami - Ceshhar Clinic,Bulawayo Metropolitan,Northern Suburbs,28.0,58.0,312,785.0,10,18.0,10.0,18.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Kowoyo - 100742 - Clinic,Mashonaland East,Goromonzi,1041.0,1309.0,178,465.0,9,12.0,3.0,17.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,1.0
+Krima - 100743 - Clinic,Midlands,Gokwe South,306.0,950.0,18,359.0,1,6.0,0.0,8.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Kumbudzi Rhc,Matabeleland South,Umzingwane,343.0,316.0,39,53.0,2,3.0,3.0,3.0,1.0,1.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+Kushinga Phikelela - 100749 - Clinic,Mashonaland East,Marondera,801.0,971.0,318,319.0,15,15.0,15.0,15.0,8.0,1.0,6.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Kutama - 100750 - Council Clinic,Mashonaland West,Zvimba,1.0,556.0,0,204.0,0,5.0,0.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Kuwadzana - 100751 - Poly Clinic,Harare Metropolitan,Harare City,4838.0,5353.0,1206,2042.0,79,95.0,51.0,77.0,13.0,10.0,10.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Kuwadzana - 100752 - Council Clinic,Mashonaland West,Zvimba,829.0,1612.0,7,593.0,0,38.0,8.0,38.0,10.0,6.0,2.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0
+Kuwadzana Phase 4 -101851- Clinic,Harare Metropolitan,Harare City,866.0,1962.0,154,369.0,19,24.0,8.0,22.0,0.0,4.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Lady Barring - 100755 - Mission Hospital,Matabeleland South,Bulilima,757.0,765.0,82,133.0,4,10.0,4.0,9.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Lake Alice - 101888 - Clinic,Matabeleland North,Lupane,723.0,764.0,196,209.0,1,2.0,4.0,2.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Lundi - 100778 - Clinic,Masvingo,Mwenezi,23.0,1412.0,4,464.0,2,19.0,0.0,23.0,0.0,2.0,2.0,0.0,0.0,0.0,0.0,1.0,0.0,1.0
+Lupaka - 100780 - Clinic,Matabeleland North,Lupane,526.0,1112.0,165,237.0,1,2.0,1.0,2.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Lupane - 100781 - Rural Health Centre,Matabeleland North,Lupane,1937.0,0.0,544,763.0,25,28.0,26.0,28.0,11.0,5.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Lushongwe Clinic,Matabeleland South,Gwanda,629.0,663.0,151,167.0,9,9.0,9.0,9.0,1.0,1.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Lustleigh Council Clinic,Mashonaland East,Marondera,124.0,488.0,1,236.0,0,6.0,1.0,6.0,2.0,2.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Luveve - 100786 - Clinic,Bulawayo Metropolitan,Emakhandeni,3859.0,5079.0,601,764.0,20,23.0,19.0,24.0,10.0,7.0,3.0,1.0,2.0,0.0,0.0,0.0,0.0,0.0
+Lynx - 100788 - Clinic Private Clinic,Mashonaland West,Hurungwe,0.0,220.0,0,163.0,0,2.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Mabelreign - 100791 - satellite clinic,Harare Metropolitan,Harare City,879.0,2253.0,251,602.0,11,23.0,7.0,16.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+Maboleni - 100793 - Clinic,Matabeleland North,Umguza,966.0,1220.0,156,231.0,5,6.0,4.0,6.0,4.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Mabuze - 100795 - Rural Health Centre,Matabeleland South,Insiza,408.0,445.0,37,53.0,3,3.0,3.0,3.0,3.0,2.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Mabvazuva,Harare Metropolitan,Epworth,0.0,194.0,0,272.0,0,4.0,0.0,3.0,0.0,3.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Mabvuku - 100796 - Clinic,Harare Metropolitan,Harare City,845.0,1755.0,531,722.0,17,19.0,11.0,15.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Mabvuku - 100797 - Poly Clinic,Harare Metropolitan,Harare City,4811.0,4730.0,1709,2250.0,67,73.0,19.0,84.0,31.0,31.0,27.0,4.0,7.0,0.0,3.0,1.0,2.0,1.0
+Macheke Clinic,Mashonaland East,Murewa,2002.0,2061.0,733,916.0,38,38.0,43.0,37.0,17.0,2.0,3.0,0.0,0.0,0.0,3.0,1.0,1.0,1.0
+Macingwana RHC,Matabeleland South,Mangwe,122.0,158.0,2,27.0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Madlambuzi - 100807 - Clinic,Matabeleland South,Bulilima,900.0,936.0,19,173.0,0,7.0,5.0,7.0,2.0,2.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Madzorera - 100817 - Clinic,Mashonaland West,Zvimba,1.0,759.0,0,120.0,0,6.0,0.0,5.0,0.0,2.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Magwegwe - 100824 - Clinic,Bulawayo Metropolitan,Emakhandeni,2477.0,3085.0,530,606.0,27,24.0,25.0,26.0,1.0,3.0,3.0,0.0,0.0,0.0,0.0,1.0,0.0,0.0
+Mahatshula Clinic,Bulawayo Metropolitan,Northern Suburbs,193.0,181.0,218,215.0,7,8.0,4.0,6.0,2.0,2.0,1.0,1.0,0.0,0.0,0.0,1.0,0.0,1.0
+Mahusekwa - 100829 - Hospital,Mashonaland East,Marondera,134.0,1156.0,87,885.0,4,29.0,1.0,22.0,0.0,7.0,2.0,0.0,0.0,0.0,0.0,3.0,0.0,2.0
+Mahuwe - 100830 - Clinic,Mashonaland Central,Mbire,448.0,535.0,198,181.0,2,3.0,3.0,3.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Majini - 100835 - Rural Health Centre,Matabeleland South,Beitbridge,997.0,1013.0,263,306.0,7,9.0,7.0,9.0,3.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Makaza - 100843 - Rural Health Centre,Matabeleland North,Tsholotsho,1146.0,1157.0,188,278.0,3,3.0,3.0,3.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Makombe - 100847 - Clinic (New - Note Yet Open),Matabeleland South,Beitbridge,205.0,203.0,73,94.0,0,0.0,0.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Makonde Christian - 100848 - Mission Hospital,Mashonaland West,Makonde,1971.0,1906.0,252,563.0,7,15.0,15.0,15.0,2.0,4.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,1.0
+Makumbe - 100853 - District Hospital,Mashonaland East,Goromonzi,2501.0,3180.0,267,1512.0,30,46.0,10.0,52.0,2.0,7.0,5.0,0.0,2.0,0.0,0.0,1.0,0.0,0.0
+Makuti Clinic,Mashonaland West,Hurungwe,67.0,119.0,3,62.0,0,1.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Makwe - 100859 - Rural Health Centre,Manicaland,Chimanimani,677.0,59.0,30,43.0,5,4.0,10.0,4.0,1.0,2.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+Malborough - 100860 - Council Clinic,Harare Metropolitan,Harare City,1985.0,1979.0,213,400.0,15,19.0,11.0,17.0,3.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Malisa Josefa - 100863 - Clinic,Midlands,Kwekwe,684.0,888.0,33,165.0,1,10.0,8.0,8.0,3.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Mambale - 100864 - Clinic,Matabeleland South,Mangwe,0.0,565.0,0,148.0,0,5.0,0.0,5.0,0.0,1.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+Mangwande - 100872 - Clinic,Midlands,Gweru,21.0,420.0,4,82.0,2,4.0,0.0,4.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Maninji - 101914 - Clinic,Matabeleland South,Mangwe,530.0,657.0,8,71.0,0,1.0,0.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Manyamba - 100875 - Clinic,Mashonaland West,Makonde,0.0,340.0,0,111.0,0,8.0,0.0,8.0,0.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+Manyika - 100879 - Clinic,Mashonaland East,Uzumba Maramba Pfungwe,0.0,350.0,0,113.0,0,4.0,0.0,2.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Mapanzure - 100884 - Clinic,Masvingo,Masvingo,0.0,1502.0,0,602.0,0,22.0,0.0,19.0,0.0,8.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Maphisa - 100890 - District Hospital,Matabeleland South,Matobo,1841.0,2232.0,66,605.0,6,59.0,28.0,46.0,3.0,9.0,10.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Mapinga  - 100891 - Clinic,Mashonaland West,Zvimba,722.0,714.0,141,295.0,5,4.0,4.0,2.0,4.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Maqhawe - 100893 - Clinic,Bulawayo Metropolitan,Nkulumane,2575.0,3008.0,784,1029.0,35,39.0,19.0,38.0,2.0,7.0,7.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Maramba - 100894 - Clinic,Mashonaland East,Uzumba Maramba Pfungwe,1.0,271.0,0,229.0,0,4.0,0.0,4.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Marange - 100896 - Rural Hospital,Manicaland,Mutare,377.0,953.0,256,391.0,15,20.0,6.0,20.0,5.0,4.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Marembera - 100897 - Rural Health Centre,Mashonaland East,Uzumba Maramba Pfungwe,0.0,300.0,0,82.0,0,3.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Marula - 100910 - Clinic,Matabeleland South,Mangwe,459.0,451.0,53,90.0,4,4.0,5.0,5.0,4.0,2.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Masanga Rural Health Centre,Mashonaland West,Hurungwe,43.0,544.0,0,355.0,0,7.0,0.0,6.0,0.0,2.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Mashambanhaka - 100924 - Clinic,Mashonaland East,Uzumba Maramba Pfungwe,618.0,597.0,140,167.0,0,2.0,25.0,1.0,6.0,0.0,0.0,0.0,0.0,0.0,3.0,1.0,1.0,1.0
+Masikana - 100929 - Clinic,Mashonaland East,Marondera,244.0,624.0,7,131.0,1,11.0,6.0,6.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Masiyarwa - 100931 - Council Clinic,Mashonaland West,Zvimba,305.0,316.0,56,66.0,3,3.0,3.0,2.0,1.0,1.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+Masomo - 100934 - Clinic,Mashonaland Central,Mbire,276.0,270.0,206,211.0,1,2.0,1.0,2.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Masukandoro - 100936 - Clinic,Mashonaland East,Goromonzi,6.0,433.0,33,315.0,2,11.0,0.0,10.0,0.0,2.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Matanda - 100943 - Rural Health Centre,Manicaland,Mutare,270.0,446.0,191,205.0,9,9.0,8.0,10.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Matapi - 100944 - Clinic,Harare Metropolitan,Harare City,818.0,1636.0,191,243.0,27,27.0,15.0,26.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Matizha - 100954 - Clinic,Masvingo,Gutu,765.0,855.0,125,199.0,7,7.0,11.0,5.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Matjinge - 100955 - Rural Health Centre,Matabeleland South,Bulilima,494.0,511.0,81,77.0,1,0.0,1.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Matobo - 100956 - Mission Clinic,Matabeleland South,Matobo,309.0,331.0,25,58.0,0,1.0,2.0,1.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Matoranjera Clinic,Mashonaland West,Makonde,4.0,192.0,0,49.0,0,5.0,0.0,4.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Matsvitsi - 100963 - Clinic,Mashonaland Central,Guruve,189.0,346.0,114,214.0,2,5.0,0.0,5.0,0.0,2.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Mawabeni Clinic,Matabeleland South,Umzingwane,824.0,1004.0,248,264.0,17,17.0,14.0,16.0,4.0,2.0,1.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+Mayobodo - 100972 - Rural Health Centre,Matabeleland South,Mangwe,660.0,762.0,125,149.0,2,6.0,5.0,5.0,4.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Mazebe - 100975 - Rural Health Centre,Midlands,Kwekwe,3.0,376.0,0,85.0,0,3.0,0.0,2.0,0.0,0.0,0.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0
+Mazowe - 100982 - Mine Clinic,Mashonaland Central,Mazowe,2.0,512.0,4,1056.0,1,40.0,2.0,50.0,0.0,2.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Mazowe Secondary Clinic,Mashonaland Central,Mazowe,0.0,100.0,0,73.0,0,4.0,0.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Mazuru - 100985 - Clinic,Masvingo,Gutu,415.0,529.0,152,163.0,2,2.0,1.0,2.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Mbare Hostel Ceshhar  Sisters' Clinic,Harare Metropolitan,Harare City,34.0,59.0,836,1579.0,4,20.0,0.0,21.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Mbare Hostels - 100988 - Clinic,Harare Metropolitan,Harare City,1349.0,2110.0,228,353.0,28,37.0,15.0,27.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Mbizingwe Rhc,Matabeleland South,Umzingwane,340.0,352.0,63,58.0,3,4.0,3.0,4.0,2.0,2.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Mbizo 1 - 100996 - Clinic,Midlands,Kwekwe,2432.0,2443.0,637,764.0,24,36.0,34.0,36.0,11.0,7.0,6.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+Mbizo 2 - 100997 - Clinic,Midlands,Kwekwe,3180.0,3302.0,834,1203.0,27,48.0,51.0,47.0,5.0,3.0,3.0,0.0,0.0,0.0,0.0,1.0,0.0,1.0
+Mbondo Clinic,Matabeleland South,Insiza,291.0,324.0,76,58.0,1,2.0,2.0,2.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Mdutshane Rural Health Centre,Matabeleland North,Bubi,415.0,460.0,152,185.0,1,1.0,1.0,1.0,2.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Mhandamabwe - 101011 - Rural Health Centre,Masvingo,Chivi,1113.0,0.0,174,416.0,3,4.0,0.0,4.0,1.0,1.0,1.0,0.0,0.0,2.0,0.0,0.0,0.0,0.0
+Mhlahlandlela Clinic,Matabeleland South,Umzingwane,425.0,393.0,67,67.0,3,3.0,3.0,3.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Mkoba 1 - 101022 - Clinic,Midlands,Gweru,3342.0,3594.0,678,689.0,17,17.0,20.0,19.0,8.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,1.0
+Mkoba Poly - 101023 - Clinic,Midlands,Gweru,3818.0,4389.0,147,1181.0,31,57.0,30.0,55.0,0.0,14.0,13.0,1.0,0.0,0.0,0.0,1.0,0.0,0.0
+Mlagisa Rural Health Centre,Matabeleland North,Tsholotsho,397.0,445.0,118,141.0,5,4.0,4.0,4.0,3.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Mogenester - 101030 - Mission Hospital,Masvingo,Masvingo,2.0,1351.0,0,122.0,0,10.0,0.0,11.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Monomutapa - 101034 - Clinic,Midlands,Gweru,2726.0,4044.0,845,1361.0,42,40.0,39.0,41.0,13.0,12.0,11.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Moy RDC Clinic,Mashonaland West,Hurungwe,7.0,879.0,0,623.0,0,4.0,0.0,4.0,0.0,2.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Mpanedziba - 101040 - Clinic,Matabeleland North,Tsholotsho,546.0,527.0,98,106.0,2,4.0,5.0,4.0,3.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Mpisini Rhc,Matabeleland South,Umzingwane,534.0,538.0,65,94.0,1,2.0,2.0,1.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Msengezi - 101053 - Mission Hospital,Mashonaland Central,Mbire,148.0,200.0,4,119.0,2,1.0,2.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Msilahove - 101055 - Rural Hospital,Midlands,Kwekwe,0.0,504.0,0,165.0,0,3.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Mt. Hampden - 101059 - Clinic,Mashonaland West,Zvimba,244.0,1517.0,27,620.0,0,8.0,4.0,11.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Mt. Pleasant - 101062 - Clinic,Harare Metropolitan,Harare City,171.0,1267.0,5,310.0,1,3.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Mt. Zuma - 101064 - Rural Health Centre,Manicaland,Mutare,0.0,342.0,17,200.0,0,9.0,0.0,8.0,0.0,1.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Mtshabezi Mission Hospital,Matabeleland South,Gwanda,638.0,786.0,19,134.0,0,4.0,1.0,4.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Mtshayeli Rural Health Centre,Matabeleland North,Tsholotsho,25.0,381.0,11,77.0,3,6.0,3.0,6.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Mucheke - 101077 - Clinic,Masvingo,Masvingo,490.0,2483.0,289,1557.0,11,63.0,8.0,65.0,2.0,4.0,4.0,0.0,0.0,0.0,0.0,1.0,0.0,1.0
+Mudzimurema Rural Health Centre,Mashonaland East,Marondera,164.0,513.0,26,133.0,3,2.0,1.0,4.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Mufakose - 101085 - Poly clinic,Harare Metropolitan,Harare City,3775.0,365.0,467,45.0,34,0.0,21.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Mukaro - 101093 - Mission Clinic,Masvingo,Gutu,355.0,489.0,97,92.0,3,2.0,3.0,3.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Mukohwe - 101096 - Clinic,Mashonaland West,Makonde,0.0,81.0,0,50.0,0,1.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Munamba Rural Health Centre,Mashonaland East,Murewa,85.0,525.0,40,128.0,0,4.0,5.0,4.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Munyikwa - 101114 - Rural Health Centre,Masvingo,Gutu,393.0,428.0,105,127.0,1,1.0,1.0,1.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Murewa Gvt District Hospital,Mashonaland East,Murewa,1612.0,1814.0,481,1236.0,17,45.0,4.0,44.0,0.0,4.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Murewa Poly,Mashonaland East,Murewa,1534.0,0.0,719,774.0,22,22.0,23.0,21.0,9.0,2.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Muriel - 101131 - Mine Clinic,Mashonaland West,Zvimba,352.0,452.0,79,85.0,3,4.0,3.0,5.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,1.0
+Muromo - 101134 - Rural Health Centre,Manicaland,Mutare,359.0,358.0,66,116.0,2,3.0,0.0,3.0,1.0,1.0,7.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Musengezi Clinic,Mashonaland Central,Mbire,204.0,200.0,116,119.0,1,1.0,1.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Mushumbi - 101148 - Clinic,Mashonaland Central,Mbire,103.0,706.0,0,385.0,0,6.0,0.0,6.0,0.0,0.0,30.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Musiso - 101153 - Mission Hospital,Masvingo,Zaka,8.0,1691.0,1,209.0,0,16.0,0.0,13.0,0.0,3.0,3.0,0.0,1.0,1.0,0.0,2.0,0.0,1.0
+Muskwe - 101155 - Clinic,Mashonaland East,Uzumba Maramba Pfungwe,108.0,181.0,93,95.0,4,4.0,2.0,5.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Musvovi - 101158 - Clinic,Masvingo,Masvingo,305.0,820.0,1,203.0,0,10.0,4.0,9.0,0.0,2.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Mwanza - 101195 - Rural Health Centre,Mashonaland East,Goromonzi,1098.0,1097.0,378,455.0,21,20.0,20.0,18.0,6.0,5.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Mwenezi - 101000 - Council Clinic,Masvingo,Mwenezi,40.0,835.0,8,254.0,0,9.0,1.0,9.0,0.0,2.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Mzilikazi - 101202 - Clinic,Bulawayo Metropolitan,Northern Suburbs,4047.0,4361.0,420,792.0,25,30.0,32.0,33.0,8.0,6.0,6.0,0.0,0.0,0.0,0.0,1.0,0.0,1.0
+Mzimuni - 101203 - Clinic,Matabeleland South,Gwanda,417.0,470.0,54,67.0,5,7.0,8.0,7.0,2.0,2.0,2.0,0.0,0.0,0.0,3.0,1.0,1.0,1.0
+Mzingwane Rhc,Matabeleland South,Umzingwane,269.0,357.0,10,47.0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Natisa - 101208 - Rural Health Centre,Matabeleland South,Matobo,757.0,780.0,70,80.0,5,6.0,6.0,7.0,2.0,4.0,3.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0
+Ndanga - 101210 - Hospital,Masvingo,Zaka,263.0,2815.0,0,1934.0,0,39.0,0.0,30.0,0.0,3.0,3.0,1.0,0.0,0.0,0.0,0.0,0.0,2.0
+Ndiweni - 101211 - Clinic,Matabeleland South,Bulilima,797.0,785.0,225,185.0,7,7.0,7.0,7.0,5.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Negomo - 101220 - Clinic,Mashonaland Central,Guruve,45.0,311.0,2,108.0,0,1.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Ngomahuru - 101253 - Rural Health Centre,Masvingo,Masvingo,212.0,336.0,24,51.0,0,0.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Ngundu - 101258 - Rural Health Centre,Masvingo,Masvingo,1344.0,456.0,661,96.0,20,7.0,22.0,7.0,2.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Nhakiwa - 101262 - Clinic,Mashonaland East,Uzumba Maramba Pfungwe,162.0,719.0,134,192.0,5,7.0,3.0,6.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Nhwali - 101271 - Rural Health Centre,Matabeleland South,Gwanda,810.0,961.0,72,107.0,5,7.0,8.0,7.0,4.0,2.0,0.0,0.0,2.0,2.0,0.0,0.0,0.0,0.0
+Njelele - 101272 - Clinic,Midlands,Gokwe South,447.0,796.0,149,435.0,6,6.0,10.0,6.0,1.0,1.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+Njube - 101273 - Clinic,Bulawayo Metropolitan,Emakhandeni,2357.0,2399.0,526,495.0,20,17.0,19.0,17.0,5.0,4.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Nkankezi - 101274 - Rural Health Centre,Matabeleland South,Insiza,1302.0,1200.0,280,299.0,12,14.0,13.0,14.0,9.0,3.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Nketa - 101276 - Clinic,Bulawayo Metropolitan,Nkulumane,4049.0,4001.0,675,627.0,25,21.0,25.0,24.0,18.0,3.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,2.0
+Nkulumane - 101278 - Clinic,Bulawayo Metropolitan,Nkulumane,3760.0,4249.0,511,830.0,36,50.0,16.0,39.0,8.0,12.0,11.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+Northern Suburbs - 101290 - Clinic,Bulawayo Metropolitan,Northern Suburbs,3117.0,3408.0,526,846.0,37,38.0,2.0,24.0,7.0,4.0,4.0,0.0,0.0,0.0,0.0,2.0,0.0,2.0
+Norton - 101291 - Hospital,Mashonaland West,Chegutu,967.0,3750.0,184,1181.0,20,66.0,3.0,46.0,0.0,7.0,7.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0
+Nottingham - 101292 - Rural Health Centre,Matabeleland South,Beitbridge,104.0,145.0,2,78.0,1,2.0,1.0,0.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Nswazwi - 101298 - Rural Health Centre,Matabeleland South,Umzingwane,378.0,645.0,43,165.0,2,5.0,1.0,5.0,4.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Ntabamhlope - 101299 - Rural Health Centre,Midlands,Gweru,513.0,656.0,78,114.0,3,5.0,7.0,6.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Ntalale - 101302 - Clinic,Matabeleland South,Gwanda,94.0,582.0,10,55.0,1,1.0,2.0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Nyagundi - 101314 - Rural Health Centre,Manicaland,Mutare,171.0,429.0,94,168.0,2,4.0,0.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Nyahombe - 101316 - Clinic,Manicaland,Nyanga,1070.0,193.0,617,92.0,8,2.0,11.0,2.0,13.0,0.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+Nyajena - 101321 - Rural Hospital,Masvingo,Masvingo,91.0,764.0,61,262.0,3,11.0,7.0,11.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Nyakapupu - 101322 - Clinic,Mashonaland Central,Guruve,171.0,255.0,55,121.0,2,3.0,2.0,2.0,0.0,0.0,1.0,9.0,0.0,0.0,0.0,0.0,0.0,0.0
+Nyakasoro - 101323 - Clinic,Mashonaland East,Uzumba Maramba Pfungwe,53.0,364.0,10,141.0,0,3.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Nyakunhuwa - 101325 - Clinic,Masvingo,Zaka,508.0,575.0,98,103.0,0,3.0,4.0,3.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Nyama - 101326 - Clinic,Mashonaland West,Hurungwe,541.0,961.0,48,383.0,1,4.0,2.0,4.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Nyamakaze - 101329 - Clinic,Mashonaland West,Hurungwe,859.0,747.0,299,414.0,4,4.0,7.0,4.0,3.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Nyamande - 101330 - Clinic,Mashonaland East,Mudzi,0.0,778.0,0,203.0,0,6.0,0.0,6.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Nyamazura - 101342 - Rural Health Centre,Manicaland,Mutare,10.0,453.0,4,95.0,0,2.0,0.0,2.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Nyambudzi - 101343 - Rural Health Centre,Mashonaland Central,Mbire,116.0,134.0,118,109.0,1,1.0,0.0,0.0,1.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Nyameni - 101344 - Clinic,Mashonaland East,Marondera,1866.0,1524.0,461,1274.0,24,28.0,30.0,29.0,8.0,5.0,5.0,0.0,0.0,0.0,0.0,1.0,0.0,1.0
+Nyamhunga - 101348 - Council Clinic,Midlands,Gokwe South,26.0,229.0,1,107.0,0,1.0,0.0,1.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Nyamime - 101351 - Rural Health Centre,Matabeleland South,Insiza,221.0,326.0,21,42.0,0,1.0,0.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Nyamupfuta Clinic,Mashonaland Central,Guruve,41.0,115.0,35,92.0,0,1.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Nyamutumbu Rural Health Centre,Mashonaland East,Murewa,789.0,798.0,157,210.0,6,9.0,5.0,5.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Nyanzou - 101370 - Clinic,Mashonaland East,Uzumba Maramba Pfungwe,155.0,172.0,75,79.0,4,4.0,2.0,2.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Nyikavanhu - 101386 - Rural Health Centre,Midlands,Chirumhanzu,319.0,472.0,11,199.0,1,4.0,2.0,5.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Nzvenga - 101390 - Clinic,Manicaland,Mutare,2.0,304.0,35,62.0,2,2.0,2.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Odzi - 101395 - Rural Hospital,Manicaland,Mutare,256.0,1676.0,39,1231.0,0,36.0,0.0,31.0,0.0,4.0,3.0,1.0,0.0,0.0,0.0,2.0,0.0,1.0
+Overspill Clinic,Harare Metropolitan,Epworth,6908.0,8190.0,1003,2022.0,115,129.0,120.0,127.0,3.0,6.0,6.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Pachanza - 101400 - Clinic,Mashonaland Central,Mount Darwin,144.0,600.0,161,173.0,9,10.0,7.0,10.0,1.0,2.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Padre Pio Poly Clinic,Mashonaland West,Chegutu,1282.0,1259.0,969,928.0,21,23.0,20.0,18.0,14.0,2.0,3.0,0.0,0.0,0.0,0.0,1.0,0.0,1.0
+Parirenyatwa Primary Care - 101852 - Clinic,Harare Metropolitan,Harare City,1251.0,2372.0,239,866.0,14,23.0,2.0,22.0,2.0,2.0,3.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0
+Patchway - 101408 - Mine Clinic,Mashonaland West,Sanyati,438.0,1726.0,146,987.0,4,45.0,8.0,35.0,2.0,4.0,5.0,0.0,0.0,0.0,0.0,1.0,0.0,1.0
+Patchway Rdc Clinic,Mashonaland West,Sanyati,1285.0,1726.0,698,987.0,43,45.0,16.0,35.0,20.0,4.0,5.0,0.0,0.0,0.0,0.0,1.0,0.0,1.0
+Pelandaba - 101412 - Clinic,Bulawayo Metropolitan,Nkulumane,2742.0,3255.0,201,591.0,13,39.0,32.0,40.0,0.0,7.0,7.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0
+Pfupajena Munic,Mashonaland West,Chegutu,1601.0,1695.0,257,1091.0,18,54.0,14.0,68.0,6.0,4.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Princess Margaret - 101429 - Clinic,Bulawayo Metropolitan,Northern Suburbs,2657.0,2582.0,774,976.0,27,30.0,34.0,36.0,25.0,16.0,10.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0
+Pumula South - 101434 - Clinic,Bulawayo Metropolitan,Emakhandeni,2169.0,2182.0,320,543.0,21,29.0,25.0,24.0,2.0,10.0,10.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0
+Raffingora Rural Hospital,Mashonaland West,Zvimba,520.0,1696.0,300,713.0,3,4.0,0.0,2.0,2.0,2.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+Rapanguwana - 101442 - Clinic,Masvingo,Chiredzi,648.0,690.0,13,189.0,0,4.0,3.0,3.0,2.0,2.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Razi - 101444 - Rural Health Centre,Masvingo,Chivi,457.0,528.0,107,88.0,1,1.0,1.0,1.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Redcliff - 101446 - Clinic,Midlands,Kwekwe,523.0,760.0,16,157.0,5,10.0,8.0,10.0,0.0,3.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Renco - 101449 - Mine Clinic,Masvingo,Masvingo,0.0,384.0,0,35.0,0,1.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Rio Tinto - 101455 - Mine Clinic,Midlands,Kwekwe,24.0,469.0,0,125.0,0,9.0,1.0,9.0,0.0,3.0,3.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+Riverdale Clinic,Midlands,Gweru,123.0,151.0,36,77.0,1,2.0,3.0,2.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Rujeko  - 101469 - Poly clinic,Harare Metropolitan,Harare City,,4787.0,672,1198.0,28,44.0,,42.0,,11.0,11.0,0.0,0.0,0.0,0.0,1.0,0.0,1.0
+Rukovo - 101470 - Clinic,Masvingo,Masvingo,63.0,515.0,4,110.0,0,2.0,0.0,2.0,0.0,2.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Runene  - 101472 - Council Clinic,Mashonaland West,Makonde,2.0,104.0,1,30.0,0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Runyararo - 101473 - Clinic,Manicaland,Chimanimani,1343.0,2204.0,785,1117.0,20,24.0,12.0,23.0,2.0,3.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Rusape - 101477 - District Hospital,Manicaland,Makoni,571.0,2215.0,120,1554.0,17,29.0,0.0,41.0,0.0,5.0,2.0,0.0,0.0,3.0,0.0,1.0,0.0,1.0
+Rusike - 101479 - Clinic,Mashonaland East,Goromonzi,199.0,834.0,0,253.0,0,15.0,1.0,12.0,0.0,3.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Rutsanana - 101491 - Clinic,Midlands,Mberengwa,3900.0,433.0,382,110.0,19,8.0,2.0,8.0,4.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Ruwa - 101493 - Rural Health Centre,Harare Metropolitan,Ruwa,39.0,734.0,50,833.0,0,43.0,0.0,43.0,0.0,8.0,9.0,3.0,0.0,1.0,0.0,0.0,0.0,0.0
+Ruwa Rehabilitation  - 101495 - Hospital,Harare Metropolitan,Ruwa,404.0,3664.0,0,1126.0,0,61.0,0.0,54.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,2.0,0.0,2.0
+Ruyamuro - 101497 - Clinic,Mashonaland Central,Guruve,1569.0,1595.0,813,993.0,16,18.0,17.0,19.0,10.0,3.0,32.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+SANZUKWI - 101529 - Clinic,Matabeleland South,Mangwe,644.0,691.0,154,88.0,4,7.0,7.0,6.0,2.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Sakubva,Manicaland,Mutare,1025.0,4674.0,112,1817.0,13,68.0,0.0,67.0,1.0,10.0,9.0,0.0,0.0,1.0,0.0,1.0,0.0,1.0
+Sakubva - 101510 - District Hospital,Manicaland,Mutare,0.0,0.0,1,0.0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Samahuru Mission Clinc,Matabeleland North,Tsholotsho,229.0,278.0,50,65.0,4,4.0,3.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Sanale - 101520 - Rural Health Centre,Matabeleland South,Insiza,430.0,406.0,17,75.0,0,3.0,3.0,3.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Sandringham - 101522 - Mission Clinic,Mashonaland Central,Mazowe,0.0,324.0,0,113.0,0,5.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Seke South - 101534 - Clinic,Harare Metropolitan,Chitungwiza,5131.0,6432.0,799,2466.0,31,72.0,3.0,72.0,19.0,7.0,7.0,0.0,0.0,0.0,0.0,1.0,0.0,1.0
+Selonga - 101536 - Rural Health Centre,Matabeleland South,Gwanda,815.0,946.0,124,134.0,8,9.0,4.0,8.0,8.0,1.0,1.0,0.0,0.0,0.0,3.0,0.0,1.0,0.0
+Selous - 101537 - Council Clinic,Mashonaland West,Chegutu,811.0,780.0,225,247.0,11,12.0,7.0,10.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Senga Poly - 101538 - Clinic,Midlands,Gweru,1001.0,1065.0,589,579.0,9,7.0,9.0,7.0,4.0,2.0,2.0,0.0,0.0,0.0,0.0,1.0,0.0,1.0
+Serima - 101542 - Mission Hospital,Masvingo,Gutu,164.0,710.0,85,191.0,3,7.0,0.0,7.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Sesame - 101543 - Clinic,Midlands,Gokwe South,29.0,1330.0,89,883.0,0,14.0,0.0,15.0,0.0,4.0,2.0,0.0,0.0,0.0,0.0,1.0,0.0,1.0
+Shaba Clinc,Matabeleland North,Tsholotsho,421.0,462.0,55,87.0,2,2.0,2.0,2.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Shale Clinic,Matabeleland South,Umzingwane,89.0,100.0,18,25.0,0,0.0,0.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Shamrock - 101551 - Clinic,Mashonaland West,Chegutu,124.0,183.0,38,80.0,0,0.0,0.0,2.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Shangani - 101556 - Mine Clinic,Matabeleland South,Insiza,211.0,219.0,46,86.0,4,3.0,1.0,3.0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Sherwood - 101561 - Clinic,Midlands,Kwekwe,531.0,773.0,515,468.0,20,22.0,24.0,24.0,8.0,4.0,6.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Shindi - 101562 - Clinic,Masvingo,Chivi,513.0,628.0,206,232.0,3,3.0,3.0,3.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Shonganiso - 101566 - Clinic,Masvingo,Masvingo,389.0,386.0,73,74.0,3,3.0,3.0,3.0,2.0,2.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Shumba - 101569 - Clinic,Mashonaland East,Chikomba,1.0,1082.0,0,287.0,0,9.0,0.0,6.0,0.0,3.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Sidakeni - 101579 - Clinic,Midlands,Kwekwe,868.0,1019.0,298,370.0,5,9.0,12.0,10.0,10.0,4.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Sikente - 101584 - Clinic,Matabeleland North,Tsholotsho,1078.0,1116.0,152,136.0,8,8.0,8.0,7.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Sikhatini - 101585 - Clinic,Matabeleland South,Bulilima,793.0,811.0,93,115.0,9,9.0,9.0,9.0,2.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Silkwe - 101589 - Rural Health centre,Matabeleland South,Gwanda,436.0,603.0,62,71.0,0,0.0,1.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Silobela - 101590 - District Hospital,Midlands,Kwekwe,647.0,1376.0,74,723.0,0,19.0,0.0,19.0,0.0,2.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Simana - 101595 - Clinic,Midlands,Kwekwe,60.0,510.0,12,136.0,0,7.0,1.0,5.0,1.0,1.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0
+Singwambizi - 101602 - Clinic,Matabeleland South,Insiza,263.0,269.0,0,26.0,0,4.0,4.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Singwango - 101603 - Clinic,Matabeleland South,Insiza,913.0,953.0,85,218.0,7,15.0,12.0,13.0,2.0,4.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Siyawareva - 101609 - Clinic,Masvingo,Zaka,152.0,814.0,112,163.0,8,6.0,2.0,7.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Sodaka Rural Health Centre,Matabeleland North,Tsholotsho,1.0,197.0,5,64.0,0,1.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Solusi - 101612 - Clinic,Matabeleland South,Bulilima,618.0,626.0,45,107.0,1,10.0,6.0,10.0,1.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Somabula - 101613 - Clinic,Midlands,Gweru,380.0,354.0,87,118.0,5,5.0,6.0,4.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Southerton - 101619 - Clinic,Harare Metropolitan,Harare City,0.0,579.0,42,76.0,3,3.0,0.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Sowa - 101620 - Rural Health centre,Mashonaland East,Uzumba Maramba Pfungwe,64.0,143.0,4,86.0,0,1.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+St Paul'S Musami Mission Hospital,Mashonaland East,Murewa,2552.0,2504.0,459,965.0,31,35.0,31.0,35.0,10.0,5.0,5.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0
+St. Andrew's - 101624 - Mission Hospital,Manicaland,Mutare,399.0,443.0,85,192.0,2,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+St. Annes Brunapeg - 101642 - Mission Hospital,Matabeleland South,Mangwe,722.0,943.0,46,236.0,3,8.0,0.0,9.0,0.0,2.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+St. Augustine's - 101627 - Mission Clinic,Manicaland,Mutasa,65.0,708.0,7,258.0,3,9.0,0.0,9.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+St. Joseph's - 101631 - Rural Health centre,Mashonaland East,Goromonzi,1093.0,2287.0,55,770.0,15,41.0,0.0,38.0,0.0,10.0,9.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+St. Joseph's - 101632 - T.B Hospital,Manicaland,Mutare,2047.0,2639.0,544,1070.0,20,44.0,33.0,39.0,0.0,2.0,2.0,0.0,0.0,0.0,0.0,1.0,0.0,1.0
+St. Lukes - 101645 - Mission Hospital,Matabeleland North,Lupane,780.0,3055.0,313,1060.0,26,34.0,14.0,31.0,1.0,2.0,1.0,1.0,0.0,0.0,3.0,1.0,2.0,1.0
+St. Mary's - 101633 - Clinic,Harare Metropolitan,Chitungwiza,6695.0,6925.0,1593,3654.0,114,226.0,86.0,220.0,27.0,10.0,7.0,0.0,3.0,0.0,3.0,4.0,2.0,4.0
+St. Patricks - 101636 - Mission Clinic,Matabeleland North,Hwange,272.0,1570.0,35,694.0,1,24.0,1.0,17.0,0.0,1.0,0.0,0.0,1.0,1.0,0.0,0.0,0.0,1.0
+St. Pauls - 101647 - Mission Hospital,Matabeleland North,Lupane,1126.0,1207.0,193,415.0,8,12.0,9.0,11.0,1.0,1.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+St. Rupert's - 101650 - Mission Hospital,Mashonaland West,Makonde,213.0,215.0,137,173.0,4,5.0,0.0,4.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+St. Welburgh - 101641 - Mission Clinic,Manicaland,Mutare,1.0,275.0,6,120.0,0,6.0,0.0,6.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Sutton - 101661 - Mine Clinic,Mashonaland West,Zvimba,366.0,655.0,68,206.0,6,9.0,9.0,9.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,1.0
+Svisvi - 101663 - Rural Health Centre,Midlands,Gokwe South,588.0,646.0,209,243.0,8,3.0,10.0,8.0,8.0,4.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Svuvure - 101665 - Rural Health Hospital,Masvingo,Zaka,428.0,529.0,132,235.0,3,3.0,3.0,3.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+TRBC - 101703 - Council Clinic,Mashonaland West,Zvimba,502.0,1182.0,82,478.0,8,9.0,7.0,11.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,1.0
+Tafara - 101669 - Clinic,Harare Metropolitan,Harare City,761.0,1268.0,506,1093.0,8,14.0,0.0,15.0,1.0,6.0,6.0,0.0,0.0,0.0,0.0,2.0,0.0,2.0
+Tengwe - 101886 - Clinic,Mashonaland West,Hurungwe,1020.0,1017.0,317,507.0,7,7.0,4.0,7.0,1.0,4.0,3.0,2.0,0.0,1.0,0.0,0.0,0.0,0.0
+Thorngrove Infectious Diseases Hospital,Bulawayo Metropolitan,Northern Suburbs,0.0,0.0,10,4.0,0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Tongwe - 101696 - Clinic,Matabeleland South,Beitbridge,1.0,1204.0,80,503.0,0,14.0,0.0,13.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Tongwe - 101697 - Clinic,Matabeleland South,Beitbridge,616.0,1204.0,51,503.0,4,14.0,0.0,13.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Torwood Clinic,Midlands,Kwekwe,1199.0,1167.0,0,162.0,0,18.0,16.0,18.0,1.0,5.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Trelawney - 101704 - Council Clinic,Mashonaland West,Zvimba,905.0,959.0,303,273.0,2,4.0,3.0,3.0,2.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Tshabalala - 101710 - Clinic,Bulawayo Metropolitan,Nkulumane,1768.0,2028.0,306,416.0,11,11.0,7.0,13.0,4.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Tshitshi - 101712 - Clinic,Matabeleland South,Mangwe,875.0,940.0,128,94.0,3,3.0,3.0,3.0,7.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Tsholotsho Urban Clinic,Matabeleland North,Tsholotsho,929.0,1435.0,174,607.0,6,21.0,9.0,114.0,2.0,4.0,4.0,0.0,0.0,0.0,0.0,1.0,0.0,1.0
+Tsokodeka clinic,Mashonaland East,Uzumba Maramba Pfungwe,86.0,84.0,65,33.0,0,0.0,1.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Tsovani - 101715 - Clinic,Masvingo,Chiredzi,1677.0,2491.0,169,1150.0,12,76.0,6.0,86.0,1.0,2.0,2.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0
+Turk Mine - 101720 - Mine Clinic,Matabeleland North,Bubi,136.0,136.0,34,35.0,2,2.0,2.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Ubh,Bulawayo Metropolitan,Bulawayo Central Hospitals,1721.0,0.0,44,2015.0,0,65.0,0.0,71.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Umboe - 101724 - Clinic,Mashonaland West,Makonde,453.0,504.0,276,244.0,7,6.0,9.0,7.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Village 13 - 101741 - Rural Health Centre,Matabeleland South,Bulilima,0.0,306.0,0,54.0,0,3.0,0.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Virginia Clinic,Mashonaland East,Murewa,541.0,580.0,121,132.0,4,12.0,7.0,9.0,6.0,3.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Vonabor - 101744 - Clinic,Mashonaland Central,Mazowe,377.0,366.0,117,151.0,5,6.0,5.0,6.0,3.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Vumba,Manicaland,Mutare,0.0,290.0,0,253.0,0,5.0,0.0,4.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Warren Park - 101760 - Poly clinic,Harare Metropolitan,Harare City,3212.0,3448.0,819,1006.0,46,54.0,45.0,58.0,3.0,11.0,11.0,0.0,0.0,0.0,3.0,1.0,0.0,1.0
+Waterfalls - 101761 - Clinic,Harare Metropolitan,Harare City,33.0,3329.0,144,1053.0,28,51.0,0.0,49.0,0.0,15.0,11.0,4.0,0.0,0.0,0.0,1.0,0.0,2.0
+Waterloo Clinic,Mashonaland East,Murewa,0.0,155.0,0,28.0,0,2.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Wenimbi Rural Health Centre,Mashonaland East,Marondera,172.0,293.0,99,89.0,0,0.0,0.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+West Nicolson - 101772 - Clinic,Matabeleland South,Gwanda,315.0,617.0,101,361.0,5,17.0,15.0,15.0,3.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Western Triangle - 101773 - Clinic,Harare Metropolitan,Harare City,695.0,2948.0,239,615.0,35,42.0,0.0,42.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Wilkins Infectious Disease Hospital - 101775 - Infectious Disease Hospital,Harare Metropolitan,Harare City,3382.0,3758.0,161,598.0,19,58.0,4.0,27.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Zano - 101781 - Clinic,Masvingo,Masvingo,441.0,533.0,107,156.0,2,2.0,2.0,2.0,4.0,2.0,0.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0
+Zengeza Clinic - 100305 - Council Clinic,Harare Metropolitan,Chitungwiza,6062.0,6252.0,611,2946.0,64,148.0,39.0,138.0,8.0,15.0,15.0,0.0,0.0,0.0,3.0,1.0,0.0,1.0
+Zezane - 101787 - Clinic,Matabeleland South,Beitbridge,981.0,1202.0,112,212.0,6,9.0,9.0,9.0,3.0,3.0,3.0,0.0,0.0,0.0,3.0,1.0,1.0,1.0
+Zhulube - 101793 - Clinic,Matabeleland South,Insiza,825.0,1153.0,163,165.0,7,9.0,6.0,9.0,4.0,1.0,1.0,0.0,0.0,0.0,0.0,1.0,0.0,1.0
+Zimbili Clinic,Matabeleland South,Umzingwane,216.0,227.0,80,86.0,0,1.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Zimunya - 101805 - Clinic,Manicaland,Mutare,304.0,999.0,44,439.0,0,14.0,2.0,14.0,0.0,6.0,6.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Zimunya Clinic,Manicaland,Mutare,947.0,999.0,332,439.0,12,14.0,16.0,14.0,8.0,6.0,6.0,0.0,0.0,0.0,3.0,0.0,1.0,0.0
+Zimuto BC-101885-Clinic,Masvingo,Masvingo,42.0,371.0,22,49.0,0,1.0,0.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,1.0
+Zivuku - 101812 - Clinic,Masvingo,Chivi,687.0,751.0,175,210.0,7,7.0,6.0,6.0,3.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Zvavahera - 101824 - Clinic,Masvingo,Gutu,304.0,489.0,85,111.0,3,3.0,3.0,4.0,2.0,0.0,0.0,0.0,0.0,0.0,0.0,1.0,0.0,1.0
+Zvimba - 101826 - Rural Hospital,Mashonaland West,Zvimba,1286.0,1633.0,270,636.0,10,18.0,15.0,18.0,1.0,7.0,5.0,0.0,1.0,1.0,3.0,1.0,1.0,1.0
+Zvipani Rural Health Centre,Mashonaland West,Hurungwe,689.0,731.0,196,418.0,1,5.0,3.0,5.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
+Zvipiripiri - 101828 - Clinic,Manicaland,Mutare,0.0,348.0,0,168.0,0,5.0,0.0,4.0,0.0,1.0,1.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0
