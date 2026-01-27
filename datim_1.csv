@@ -1,0 +1,178 @@
+Province,District,Facility,Facility ID,HTS_TST,HTS_POS,TX_NEW
+Bulawayo,Bulawayo,Cesshar,ZW090A49,363,18,16
+Bulawayo,Bulawayo,Cowdray Park - 100348 - Clinic,bCj2JfVpDwN,1234,64,83
+Bulawayo,Bulawayo,Cowdry Park Health Centre,ZW090A0I,681,58,25
+Bulawayo,Bulawayo,Dr. Shennan - 100418 - Clinic,wBUDmbYlwLg,236,4,5
+Bulawayo,Bulawayo,E.F. Watson - 100429 - Clinic,g6ay6w7LekM,443,6,10
+Bulawayo,Bulawayo,Emakhandeni - 100443 - Clinic,MdssoEu135X,512,14,12
+Bulawayo,Bulawayo,Emganwini Clinic,aaUa9jRqdW4,54,2,4
+Bulawayo,Bulawayo,Entumbane - 100449 - Clinic,zmivGPwI9w9,259,19,14
+Bulawayo,Bulawayo,Ingutsheni - 100638 - Central Hospital,ZW090A0B,121,6,0
+Bulawayo,Bulawayo,Khami - 100733 - Clinic,e1IkMDxL8fe,540,42,22
+Bulawayo,Bulawayo,Luveve - 100786 - Clinic,xgkg7SkAtoW,563,21,16
+Bulawayo,Bulawayo,Magwegwe - 100824 - Clinic,W71FXxLCgwr,638,37,22
+Bulawayo,Bulawayo,Mahatshula Clinic,Jf06hGdTGOt,212,11,7
+Bulawayo,Bulawayo,Maqhawe - 100893 - Clinic,RPASqynqwCM,893,35,25
+Bulawayo,Bulawayo,Mpilo - 101041 - Central Hospital,ZW090D0D,203,23,30
+Bulawayo,Bulawayo,Mzilikazi - 101202 - Clinic,zxc4441YIhY,322,16,19
+Bulawayo,Bulawayo,Njube - 101273 - Clinic,yuqvs8nDoW7,377,27,36
+Bulawayo,Bulawayo,Nketa - 101276 - Clinic,kQYOhNfF8V7,0,0,0
+Bulawayo,Bulawayo,Nkulumane - 101278 - Clinic,YVhOfzBetf1,597,42,29
+Bulawayo,Bulawayo,Northern Suburbs - 101290 - Clinic,HyfZLnkED5k,586,31,28
+Bulawayo,Bulawayo,Pelandaba - 101412 - Clinic,vzOHH2UeLTM,459,45,40
+Bulawayo,Bulawayo,Princess Margaret - 101429 - Clinic,CyzLGOqW4CZ,746,32,47
+Bulawayo,Bulawayo,Pumula - 101432 - Clinic,xQrUWw2fUC7,573,40,41
+Bulawayo,Bulawayo,Pumula South - 101434 - Clinic,Ta5WU3NkNI0,293,24,19
+Bulawayo,Bulawayo,Thorngrove,ZW090A0E,28,0,0
+Bulawayo,Bulawayo,Tshabalala - 101710 - Clinic,lmWhvNsB4XS,414,12,19
+Bulawayo,Bulawayo,United Bulawayo Hospital - 101723 - Central Hospital,ZW090C0C,354,19,0
+Harare,Chitungwiza,Seke North - 101533 - Clinic,tPiQaqp8wX7,1821,78,154
+Harare,Chitungwiza,Seke South - 101534 - Clinic,kVEQJTFoFoA,546,39,46
+Harare,Chitungwiza,St. Mary's - 101633 - Clinic,JHGXfAqaDN6,1723,97,273
+Harare,Chitungwiza,Zengeza Clinic - 100305 - Council Clinic,MviCUcbWstw,488,48,94
+Harare,Epworth,Epworth - 100451 - Poly Clinic,GN8ay9yoERu,959,111,338
+Harare,Epworth,Epworth - 100452 - Mission Clinic,F0ea0uQpBtP,189,28,16
+Harare,Epworth,Overspill - 101399 - Satellite Clinic,ZW030927,761,90,172
+Harare,Harare,Arcadia - 100015 - Clinic,OBXlKhRkRIb,18,2,0
+Harare,Harare,Avondale - 100030 - Clinic,LixFsP9YMT9,305,14,19
+Harare,Harare,Beatrice Infectious - 100050 - Hospital,MjDD6XQksTN,73,7,70
+Harare,Harare,Belvedere - 100055 - Poly clinic,UiPBTlrwap5,35,5,0
+Harare,Harare,Borrowdale - 100086 - Clinic,WaYcDd2d9pk,158,13,9
+Harare,Harare,Braeside - 100091 - Clinic,t0hAcwHFHPq,266,10,24
+Harare,Harare,Budiriro - 100098 - Poly Clinic,GdL5a5OSZ15,737,37,66
+Harare,Harare,Budiriro - 101889 - Satelite Clinic,No0CVtnUHfZ,0,0,0
+Harare,Harare,Cesshar Mbare,ZW000A2601,494,7,9
+Harare,Harare,Eastly - 100433 - Clinic,ZRcIuk4ds0W,22,0,0
+Harare,Harare,Glen Norah - 100506 - Satellite clinic,R9siosZGUNf,35,11,13
+Harare,Harare,Glen View  - 100508 - Satellite clinic,JKa3ZBAdM6k,208,22,6
+Harare,Harare,Glen View - 100507 - Poly clinic,mUxVNM06Sk3,749,56,238
+Harare,Harare,Greendale - 100535 - Clinic,FU8Z93y9IuS,64,2,1
+Harare,Harare,Hatcliffe - 100584 - Poly clinic,F4AJYW3LDd7,126,38,29
+Harare,Harare,Hatfield - 100585 - Clinic,uToHmSh0xud,261,14,0
+Harare,Harare,Highfield - 100593 - Poly Clinic,PLxOtSolhG5,99,20,64
+Harare,Harare,Highlands - 100596 - Clinic,EvB19FciC9r,49,1,0
+Harare,Harare,Highlands PCC,VyjlnYDk0Qv,66,14,13
+Harare,Harare,Hopley - 100608 - Clinic,yuE9DIrPeww,402,41,136
+Harare,Harare,Kambuzuma - 100695 - Poly clinic,AYEjUHiuvp5,238,19,29
+Harare,Harare,Kuwadzana - 100751 - Poly Clinic,mee4OawYuZj,1531,81,408
+Harare,Harare,Kuwadzana Phase 4 -101851- Clinic,rWhTP9rL1pr,143,17,21
+Harare,Harare,Mabelreign - 100791 - satellite clinic,KDRm4HCFdj9,181,17,7
+Harare,Harare,Mabvuku - 100796 - Clinic,ubKnqpQFMbU,600,24,14
+Harare,Harare,Mabvuku - 100797 - Poly Clinic,kN7DcESNWZp,1605,56,85
+Harare,Harare,Malborough - 100860 - Council Clinic,dhH6KRKUf1c,201,18,37
+Harare,Harare,Matapi - 100944 - Clinic,E7AXNPjenwo,168,15,25
+Harare,Harare,Mbare - 100987 - Poly clinic,G6bGAnRpVN3,1077,87,336
+Harare,Harare,Mbare Hostels - 100988 - Clinic,s1BtvNQ1vRc,187,22,20
+Harare,Harare,Mt. Pleasant - 101062 - Clinic,EWMnY0PYBjL,112,8,0
+Harare,Harare,Mufakose - 101085 - Poly clinic,MNpfnKkWMnl,406,29,51
+Harare,Harare,Mufakose FHS,ZW000A114,35,2,0
+Harare,Harare,Parirenyatwa Primary Care - 101852 - Clinic,hfkMdRTZsja,248,11,6
+Harare,Harare,Rujeko  - 101469 - Poly clinic,mOG4It93hxE,781,40,0
+Harare,Harare,Rutsanana - 101491 - Clinic,GLqagpqiJ55,147,5,66
+Harare,Harare,Southerton - 101619 - Clinic,fbumlk4A6cT,26,1,0
+Harare,Harare,Stoneridge,ZW000A0I,19,4,0
+Harare,Harare,Tafara - 101669 - Clinic,UM3CeWRmpig,243,4,5
+Harare,Harare,Warren Park - 101760 - Poly clinic,RG4VU0RvA6Q,676,38,45
+Harare,Harare,Wilkins Infectious Disease Hospital - 101775 - Infectious Disease Hospital,NwIjXPvTYN0,117,19,43
+Harare,Ruwa,Ruwa - 101493 - Rural Health Centre,bI1tMUwxCTF,743,24,22
+Harare,Ruwa,Ruwa Rehabilitation  - 101495 - Hospital,pH4O4ZdhV53,22,10,14
+Manicaland,Mutare,Zimunya - 101805 - Clinic,ZW010539,91,1,11
+Mashonaland Central,Guruve,Bakasa - 100035 - Clinic,GYbuNzdwdUb,223,4,6
+Mashonaland Central,Guruve,Bepura - 100058 - Clinic,ZW020327,200,4,1
+Mashonaland Central,Guruve,Guruve - 100553 - District Hospital,gn5KxqkLgTm,8,2,0
+Mashonaland Central,Guruve,Guruve - 100554 - Clinic,jL9rTOt4KD3,685,12,15
+Mashonaland Central,Mazowe,Bare - 100046 - Clinic,shdHYR7Vlpv,153,1,3
+Mashonaland Central,Mazowe,Concession  - 100345 - District Hospital,zbeXocs4ras,667,39,47
+Mashonaland Central,Mazowe,Dambo - 100361 - Clinic,e4uQ0NpQoba,51,6,8
+Mashonaland Central,Mazowe,Donje - 100409 - Clinic,CxlReo4oAPb,71,5,8
+Mashonaland Central,Mazowe,Henderson Research - 100590 - Clinic,TL6P8ih7Ra3,16,3,7
+Mashonaland Central,Mazowe,Howard - 100611 - Mission Hospital,fRsvqX30akL,0,0,0
+Mashonaland Central,Mazowe,Mvurwi - 101192 - Hospital,rn0AGNueA6V,812,22,24
+Mashonaland Central,Mazowe,Nzvimbo - 101391 - Clinic,K84eutOBGqf,329,8,13
+Mashonaland Central,Mazowe,Rosa - 101459 - Rural Hospital,BCQx0EncS5A,189,5,41
+Mashonaland Central,Mazowe,Suoguru Clinic,AYlIKA9TEwG,254,19,11
+Mashonaland Central,Mazowe,Tsungubvi - 101717 - Clinic,ZKR9y6QBLKq,743,21,0
+Mashonaland Central,Mbire,Angwa - 100010 - Clinic,EDClzGRGLtD,84,1,1
+Mashonaland Central,Mbire,Chitsungo - 100303 - District Hospital,a5nhOcrZJdL,188,4,1
+Mashonaland Central,Mbire,Mushumbi - 101148 - Clinic,SncjH98WFxs,366,1,4
+Mashonaland Central,Mt Darwin,Karanda - 100709 - Mission Hospital,nBHR2ZPXjOV,19,8,26
+Mashonaland Central,Mt Darwin,Matope - 100958 - Clinic,Igde8AEz22R,319,11,7
+Mashonaland East,Goromonzi,Bromley - 100093 - Rural Health Centre,o11Z9SbhWy2,84,7,5
+Mashonaland East,Goromonzi,Caledonia - 100115 - Clinic,ZW030257,370,27,15
+Mashonaland East,Goromonzi,Chinyika - 100242 - Clinic,GLitgBlY1o4,394,14,12
+Mashonaland East,Goromonzi,John Reimer - 100668 - Clinic,UHYe7uDKdy0,189,7,2
+Mashonaland East,Goromonzi,Kowoyo - 100742 - Clinic,KCZ5VpGQhPY,137,7,8
+Mashonaland East,Goromonzi,Kubatsirana - 100744 - Clinic,jNap2n4Fp0y,0,0,0
+Mashonaland East,Goromonzi,Makumbe - 100853 - District Hospital,LUkaYUNEAWd,275,31,4
+Mashonaland East,Goromonzi,Mwanza - 101195 - Rural Health Centre,feUcANH6pxB,541,12,12
+Mashonaland East,Goromonzi,Rusike - 101479 - Clinic,SoB3qwqFglW,0,0,0
+Mashonaland East,Goromonzi,St. Joseph's - 101631 - Rural Health centre,Qe0frbRzvAu,35,1,0
+Mashonaland East,Marondera,Kushinga Phikelela - 100749 - Clinic,qEnOAb2ngj2,263,14,16
+Mashonaland East,Murehwa,Kadzere - 100686 - Clinic,jGH2r8SpBR1,111,6,3
+Mashonaland East,Murehwa,Murewa - 101129 - District Hospital,ZW03070A,439,5,40
+Mashonaland East,Murehwa,St. Paul's Musami - 101638 - Mission Hospital,ZW03070B,456,25,41
+Mashonaland East,Seke,Beatrice - 100049 - Rural Hospital,HzsCdzycH81,829,33,2
+Mashonaland East,Seke,Jonasi - 100673 - Clinic,dinMl4eP4Nu,489,21,37
+Mashonaland East,Seke,Kunaka - 100746 - Rural Hospital,oDRIn1TRJQ5,280,11,47
+Mashonaland East,UMP,Mashambanhaka - 100924 - Clinic,Dn8LxB4ddA4,110,0,6
+Mashonaland East,UMP,Mutawatawa - 101170 - District Hosptal,x7PRZXUho2z,397,15,30
+Mashonaland East,UMP,Tsokodeka clinic,DlgvXgwJqJ7,44,1,1
+Mashonaland West,Chegutu,Padre Pio Poly Clinic,L4C0z0Dslvc,904,17,28
+Mashonaland West,Mhondoro,Battlefields,ZW040526,675,24,42
+Mashonaland West,Zvimba,Darwendale - 100368 - Rural Hospital,kvq5cN02EHW,341,8,12
+Masvingo,Chiredzi,Chiredzi - 100264 - Hospital,YbDW3tcFc5A,0,0,0
+Masvingo,Chiredzi,Rapanguwana - 101442 - Clinic,zxb1zUFM5sS,0,0,6
+Masvingo,Chivi,Chivi - 100319 - Rural Hospital,yUZhrtZsDix,0,0,0
+Masvingo,Chivi,Mhandamabwe - 101011 - Rural Health Centre,kFndlxCVNkl,0,0,0
+Masvingo,Chivi,Nyahombe - 101316 - Clinic,K97eFfGyj1Z,186,7,18
+Masvingo,Chivi,Zivuku - 101812 - Clinic,jdwUJNG2RZj,179,10,12
+Masvingo,Gutu,Chinyika - 100243 - Rural Health Centre,fg20SUCO1na,80,1,2
+Masvingo,Gutu,Gutu - 100557 - Mission Hospital,SmTWwxr4dsM,23,2,1
+Masvingo,Gutu,Majada - 100833 - Rural Health Centre,ZW080402,0,0,0
+Masvingo,Gutu,Zvavahera - 101824 - Clinic,hmLr5OJqWd6,83,1,2
+Masvingo,Masvingo,Bondolfi - 100082 - Rural Hospital,mJaQxbScx06,32,0,0
+Masvingo,Masvingo,Charumbira - 100141 - Clinic,Q5S4ghrkIPr,52,1,3
+Masvingo,Masvingo,Mapanzure - 100884 - Clinic,TY6QX9xvr5f,0,0,0
+Masvingo,Masvingo,Mogenester - 101030 - Mission Hospital,THcy9of3EKy,0,0,0
+Masvingo,Masvingo,Mucheke - 101077 - Clinic,bQEbyIDLBKt,229,5,6
+Masvingo,Masvingo,Mushandike - 101142 - Clinic,khsYWpCvLLQ,0,0,1
+Masvingo,Masvingo,Musvovi - 101158 - Clinic,VzoCjYnSVc2,0,0,0
+Masvingo,Masvingo,Nemwanwa - 101228 - Clinic,qzKscgrRHcZ,187,0,6
+Masvingo,Masvingo,Ngomahuru - 101253 - Rural Health Centre,eA27CMD9GCW,14,0,3
+Masvingo,Masvingo,Nyikavanhu - 101386 - Rural Health Centre,Gx9mi4IpwDI,4,0,3
+Masvingo,Masvingo,Renco - 101449 - Mine Clinic,hLt1vxPMtLl,0,0,0
+Masvingo,Masvingo,Rujeko - 101468 - Clinic,jOHozTE79SN,662,20,65
+Masvingo,Masvingo,Rukovo - 101470 - Clinic,Q573I7dDsyy,0,0,0
+Masvingo,Masvingo,Runyararo North West Council Clinic,ZW080584,526,13,44
+Masvingo,Masvingo,Runyararo North West Council Clinic,RyXYCIjkAWw,754,18,19
+Masvingo,Masvingo,Shonganiso - 101566 - Clinic,AD1DBy9TnBQ,60,2,2
+Masvingo,Masvingo,Shumba - 101569 - Clinic,GmVXlJ4SYAZ,0,0,0
+Masvingo,Masvingo,Zimuto BC-101885-Clinic,lfdYioS0Sbu,11,1,0
+Masvingo,Mwenezi,Chimbudzi - 100211 - Clinic,Bvkjml3FqP8,94,2,7
+Masvingo,Mwenezi,Neshuro - 101232 - District Hospital,aE9GkM17t5V,0,0,0
+Masvingo,Zaka,Bvukururu - 100110 - Clinic,OpqO7PRXP1Q,145,3,4
+Masvingo,Zaka,Jerera - 100659 - Satelite Clinic,JPIw3vZvRxE,0,0,0
+Masvingo,Zaka,Musiso - 101153 - Mission Hospital,zF94vTZUOen,1,0,0
+Matabeleland North,Bubi,Mbembeswana - 100990 - Rural Health Centre,n0JZrktiRpP,97,4,12
+Matabeleland North,Nkayi,Nkayi - 101275 - District Hospital,j0FI6bcuGFL,33,2,0
+Matabeleland North,Umguza,Mbembesi - 100989 - Rural Health Centre,Lux101IAoQw,285,7,13
+Matabeleland North,Umguza,Nyamandlovu - 101332 - Hospital,NwhxM073HO5,303,12,16
+Matabeleland North,Umguza,Redwood - 101447 - Clinic,ZW050728,169,12,5
+Matabeleland South,Insiza,Nkankezi - 101274 - Rural Health Centre,lCRlkEz71cc,319,20,30
+Matabeleland South,Insiza,Shangani - 101557 - Rural Hospital,LbdpvKwWs0Y,0,0,14
+Matabeleland South,Insiza,Singwango - 101603 - Clinic,jTCANAwYpUA,32,4,17
+Matabeleland South,Insiza,Zhulube - 101793 - Clinic,WXjYZkmAcxq,126,16,18
+Matabeleland South,Matobo,Kezi - 100732 - Rural Hospital,IKhkPBZe9GG,192,9,12
+Matabeleland South,Matobo,Matobo Rural - 100957 - Rural Hospital,CRnw6S2VnRr,83,8,8
+Matabeleland South,Matobo,Natisa - 101208 - Rural Health Centre,kyaDYgOIpBZ,29,0,0
+Matabeleland South,Matobo,St. Joseph's - 101644 - Rural Hospital,r8YiLD53wqA,131,7,12
+Matabeleland South,Matobo,Tshelanyemba - 101711 - Mission Hospital,fGPBRoboFJn,65,1,0
+Matabeleland South,Umzingwane,Habani - 100578 - Clinic,ZW060626,125,6,13
+Matabeleland South,Umzingwane,How Mine - 100610 - Mine Clinic,ZW060676,101,0,0
+Matabeleland South,Umzingwane,Mawabeni - 100969 - Clinic,ZW060627,241,30,32
+Matabeleland South,Umzingwane,Nhlangano - 101269 - Clinic,ZW060629,129,9,13
+Matabeleland South,Umzingwane,Ntshamathe - 101304 - Clinic,ZW060631,81,3,3
+Matabeleland South,Umzingwane,Umzingwane - 101725 - Clinic,ZW060606,60,4,4
+Matabeleland South,Umzingwane,Zimbili - 101911 - Clinic,ZW060634,85,3,3
+Midlands,Gweru,Somabula - 101613 - Clinic,GJpUvLLUGTt,98,3,2
+Midlands,Kwekwe,Sherwood - 101561 - Clinic,swWTIel4uf2,399,20,19
