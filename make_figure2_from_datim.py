@@ -24,39 +24,6 @@ matplotlib.use("Agg")  # non-interactive backend
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-# --- Indicator targets ---
-DEFAULT_TARGETS = {
-    "TX_CURR": 823,
-    "TX_TB": 823,
-    "TX_ML": 823,
-    "HTS_TST and HTS_POS": 823,
-    "PMTCT_STAT": 761,
-    "PMTCT_ART": 659,
-    "TB_PREV": 657,
-    "TX_PVLS": 823,
-    "HTS_INDEX": 823,
-    "TX_NEW": 823,
-    "TB_ART": 657,
-    "PREP_NEW": 628,
-    "PMTCT_FO": 661,
-    "HTS_SELF": 823,
-    "TB_STAT": 657,
-    "PMTCT_EID": 655,
-    "CXCA_SCRN": 628,
-    "CXCA_TX": 473,
-    "PREP_CT": 628,
-    "TX_RTT": 823,
-    "PMTCT_HEI": 661,
-}
-
-def load_targets(targets_csv: str | None) -> dict:
-    if targets_csv is None or not os.path.exists(targets_csv):
-        return DEFAULT_TARGETS
-    df = pd.read_csv(targets_csv)
-    if not {"Indicator", "Target"}.issubset(df.columns):
-        raise ValueError("Targets CSV must have columns: 'Indicator', 'Target'")
-    return dict(zip(df["Indicator"], df["Target"]))
-
 def load_datim(datim_path: str) -> pd.DataFrame:
     usecols = ["Period", "SiteProvince", "SiteDistrict", "SiteName",
                "Indicator", "DATIM_Indicator", "Value"]
